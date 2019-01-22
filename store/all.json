@@ -1,0 +1,265 @@
+{
+  "id": "all",
+  "articles": [
+    {
+      "source": {
+        "id": "cnn",
+        "name": "CNN"
+      },
+      "author": "Sara Murray, CNN",
+      "title": "Mueller wants to know about 2016 Trump campaign's ties to NRA - CNN",
+      "description": "Special counsel Robert Mueller's team has expressed interest in the Trump campaign's relationship with the National Rifle Association during the 2016 campaign.",
+      "url": "https://www.cnn.com/2019/01/22/politics/mueller-nunberg-trump-campaign-nra/index.html",
+      "urlToImage": "https://cdn.cnn.com/cnnnext/dam/assets/160520165709-donald-trump-may-20-2016-super-tease.jpg",
+      "publishedAt": "2019-01-22T21:56:00Z",
+      "content": null
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Mlb.com"
+      },
+      "author": null,
+      "title": "Timeline of Mariano Rivera's career - MLB.com",
+      "description": "Mariano Rivera knew that it was the final appearance of his illustrious career, and the future Hall of Famer was fighting off what he would describe as a \"bombardment of emotions,\" attempting to summon the strength to finish. Spotting two familiar figures asc…",
+      "url": "https://www.mlb.com/news/timeline-of-mariano-riveras-career/c-302985836",
+      "urlToImage": "https://securea.mlb.com/assets/images/6/9/0/302987690/cuts/960x540/cut.jpg",
+      "publishedAt": "2019-01-22T21:33:37Z",
+      "content": "Mariano Rivera knew that it was the final appearance of his illustrious career, and the future Hall of Famer was fighting off what he would describe as a \"bombardment of emotions,\" attempting to summon the strength to finish. Spotting two familiar figures asc… [+7663 chars]"
+    },
+    {
+      "source": {
+        "id": "cnbc",
+        "name": "CNBC"
+      },
+      "author": "Sarah Whitten",
+      "title": "Here's why you won't be able to see Netflix's best picture nominee 'Roma' at most theaters - CNBC",
+      "description": "AMC Theatres and Regal Cinemas have both declined to show Netflix's \"Roma\" at their theaters following the Oscar nominations Tuesday.",
+      "url": "https://www.cnbc.com/2019/01/22/you-cant-see-netflixs-best-picture-nominee-roma-at-most-theaters.html",
+      "urlToImage": "https://fm.cnbc.com/applications/cnbc.com/resources/img/editorial/2019/01/22/105691719-1548159874697aef6fd8893ee6267cd36c12a1961fc627cea7a7b.1910x1000.jpg",
+      "publishedAt": "2019-01-22T21:29:47Z",
+      "content": "Netflix's critically acclaimed film \"Roma\" may have landed the streaming platform its first ever best picture Academy Award nomination, but that doesn't mean it will be headed to the big screen. div &gt; div.group &gt; p:first-child\"&gt; In the wake of the an… [+1937 chars]"
+    },
+    {
+      "source": {
+        "id": "cnn",
+        "name": "CNN"
+      },
+      "author": "Brian Lowry, CNN",
+      "title": "'Black Panther,' 'Roma' lead Oscars into new frontiers - CNN",
+      "description": "Oscar nominations analysis: 'Black Panther,' 'Roma' lead Oscars into new frontiers, as superheroes and Netflix officially join the party",
+      "url": "https://www.cnn.com/2019/01/22/entertainment/oscar-nominations-analysis/index.html",
+      "urlToImage": "https://cdn.cnn.com/cnnnext/dam/assets/180823181800-11-netflix-hulu-amazon-september-super-tease.jpg",
+      "publishedAt": "2019-01-22T21:21:00Z",
+      "content": "(CNN) Eight movies were nominated for best picture on Tuesday, but there are two that couldn't be more different -- \" Black Panther,\" the Marvel blockbuster; and \" Roma,\" Alfonso Cuarón's black-and-white Netflix film -- might be the most significant in terms … [+3995 chars]"
+    },
+    {
+      "source": {
+        "id": "engadget",
+        "name": "Engadget"
+      },
+      "author": "Kris Holt",
+      "title": "Alphabet made a quiz to help you detect phishing scams - Engadget",
+      "description": "Alphabet's Jigsaw project wants to play a game.",
+      "url": "https://www.engadget.com/2019/01/22/alphabet-google-jigsaw-phishing-scam-quiz/",
+      "urlToImage": "https://o.aolcdn.com/images/dims?thumbnail=1200%2C630&quality=80&image_uri=https%3A%2F%2Fo.aolcdn.com%2Fimages%2Fdims%3Fresize%3D2000%252C2000%252Cshrink%26image_uri%3Dhttps%253A%252F%252Fs.yimg.com%252Fos%252Fcreatr-uploaded-images%252F2019-01%252F6b576300-1e8a-11e9-bfe1-89eb7f43d747%26client%3Da1acac3e1b3290917d92%26signature%3Dcf4c278ef608d546e945bb068293204372db9912&client=amp-blogside-v2&signature=f0785e4185c4006bd9b33b542df2244059f36c76",
+      "publishedAt": "2019-01-22T21:03:16Z",
+      "content": "The company's Jigsaw unit wants to play a game, as it has created a quiz for you to test your phishing-detection skills in case spammy emails slip through your email service's filters and reach your inbox. The team drew from materials Jigsaw has used to train… [+480 chars]"
+    },
+    {
+      "source": {
+        "id": "the-verge",
+        "name": "The Verge"
+      },
+      "author": "Julia Alexander",
+      "title": "Twitter is rolling out a new web interface, including an emoji button - The Verge",
+      "description": "Twitter is updating its desktop version for some users, which will include aesthetic and functional changes. One of the biggest changes is a dedicated emoji button.",
+      "url": "https://www.theverge.com/2019/1/22/18193322/twitter-desktop-update-emoji-trending-search",
+      "urlToImage": "https://cdn.vox-cdn.com/thumbor/zCX0QSQz6obVNigjxznYOx444C4=/0x45:2866x1546/fit-in/1200x630/cdn.vox-cdn.com/uploads/chorus_asset/file/13706845/Screen_Shot_2019_01_22_at_3.30.17_PM.png",
+      "publishedAt": "2019-01-22T21:03:11Z",
+      "content": "Twitter has started to roll out a new interface for its web users that includes several key features, like a newly designed emoji button. The most important changes are tiny shortcuts to make tweeting easier. A large, dedicated button in the tweet box makes i… [+757 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Washingtonexaminer.com"
+      },
+      "author": "https://www.washingtonexaminer.com/author/nicole-russell",
+      "title": "Trump's military transgender ban is more reasonable than you think - Washington Examiner",
+      "description": "The Supreme Court announced on Tuesday in a 5-4 decision that they would allow the transgender military ban to go into effect while the lower courts continued to hammer out the issue. To be clear, they did not rule on the merits of the case (whether the presi…",
+      "url": "https://www.washingtonexaminer.com/opinion/trumps-military-transgender-ban-is-more-reasonable-than-you-think",
+      "urlToImage": "https://mediadc.brightspotcdn.com/dims4/default/5f1f3e4/2147483647/strip/true/crop/2290x1202+0+0/resize/1200x630!/quality/90/?url=https%3A%2F%2Fmediadc.brightspotcdn.com%2F36%2F6f%2Fad7dc94b49cd8116492e5bd7247a%2Ftrump-millitary-ttans-ban.jpg",
+      "publishedAt": "2019-01-22T20:58:00Z",
+      "content": "T he Supreme Court announced on Tuesday in a 5-4 decision that they would allow the transgender military ban to go into effect while the lower courts continued to hammer out the issue. To be clear, they did not rule on the merits of the case (whether the pres… [+4081 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Thedailybeast.com"
+      },
+      "author": "Audrey McNamara",
+      "title": "Four Accused of Plotting to Attack Muslim Community - The Daily Beast",
+      "description": "Investigators say they recovered 23 rifles and shotguns, all legal weapons, from multiple homes.",
+      "url": "https://www.thedailybeast.com/four-accused-of-plotting-to-attack-muslim-community",
+      "urlToImage": "https://img.thedailybeast.com/image/upload/c_crop,d_placeholder_euli9k,h_1440,w_2560,x_0,y_0/dpr_2.0/c_limit,w_740/fl_lossy,q_auto/v1548187991/police_tape_3_u321ik",
+      "publishedAt": "2019-01-22T20:47:55Z",
+      "content": "Police in Greece, New York, have arrested and charged four suspects who allegedly planned to attack a nearby Muslim community. The four men were each charged with three counts of criminal possession of a weapon and one count of conspiracy. According to court … [+1155 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Aol.com"
+      },
+      "author": "Jennifer Starks",
+      "title": "North Carolina judge refuses to certify Republican as winner of U.S. House vote - AOL",
+      "description": "A North Carolina judge rejected Mark Harris' bid to be certified as the winner of a congressional vote at the center of an election fraud investigation.",
+      "url": "https://www.aol.com/article/news/2019/01/22/judge-refuses-to-certify-republican-as-winner-of-house-vote/23649930/",
+      "urlToImage": "https://o.aolcdn.com/images/dims3/GLOB/legacy_thumbnail/1028x675/format/jpg/quality/85/http%3A%2F%2Fmedia.zenfs.com%2Fen_us%2FNews%2Fap_webfeeds%2F40ae5e946b5f4cb2ae2d162f8bf6c766.jpg",
+      "publishedAt": "2019-01-22T20:36:29Z",
+      "content": "A North Carolina judge on Tuesday rejected Republican Mark Harris' bid to be certified as the winner of a congressional vote at the center of an election fraud investigation, saying doing so would be a \"dramatic intervention.\" Harris claimed victory over Demo… [+5474 chars]"
+    },
+    {
+      "source": {
+        "id": "politico",
+        "name": "Politico"
+      },
+      "author": "https://www.facebook.com/andrew.restuccia",
+      "title": "White House forging ahead with State of the Union planning - POLITICO",
+      "description": "Officials intend to move forward until Nancy Pelosi publicly axes the event, a move that they believe would be seen as nakedly political.",
+      "url": "https://www.politico.com/story/2019/01/22/white-house-planning-state-of-the-union-1119849",
+      "urlToImage": "https://static.politico.com/73/69/1f6614624ed4b4228203f2a5a3f4/190122-trump-sotu-politico-773.jpg",
+      "publishedAt": "2019-01-22T20:29:00Z",
+      "content": "President Donald Trump, seen here before his 2018 State of the Union address, has been advised by senior White House aides to stick to tradition with a formal address from the House chamber, even though Speaker Nancy Pelosi has suggested he delay the speech d… [+4422 chars]"
+    },
+    {
+      "source": {
+        "id": "the-new-york-times",
+        "name": "The New York Times"
+      },
+      "author": null,
+      "title": "Brazil’s Bolsonaro is the Face of Populism at the Davos Forum - The New York Times",
+      "description": "President Jair Bolsonaro set the tone for a Davos gathering with many U.S. and European leaders absent this year, dealing with crises back home.",
+      "url": "https://www.nytimes.com/2019/01/22/world/americas/bolsonaro-populist-davos-forum.html",
+      "urlToImage": "https://static01.nyt.com/images/2019/01/23/world/23davos-bolsonaro/23davos-bolsonaro-facebookJumbo.jpg",
+      "publishedAt": "2019-01-22T20:12:21Z",
+      "content": "Prime Minister Theresa May of Britain, who is dealing with the chaos over Britains exit from the European Union, and President Emmanuel Macron of France, who is facing a wave of unrest from Yellow Vest protesters, both skipped this years meeting. Mr. Pompeo s… [+1791 chars]"
+    },
+    {
+      "source": {
+        "id": "nbc-news",
+        "name": "NBC News"
+      },
+      "author": "Reuters",
+      "title": "U.S. insulin costs per patient nearly doubled from 2012 to 2016, study finds - NBCNews.com",
+      "description": "The findings by the Health Care Cost Institute underline the growing national outcry over rising drug prices.",
+      "url": "https://www.nbcnews.com/health/diabetes/u-s-insulin-costs-patient-nearly-doubled-2012-2016-study-n961296",
+      "urlToImage": "https://media4.s-nbcnews.com/j/newscms/2019_04/2725156/190122-insulin-al-1303_6f05c3ad875daa660271bf9e7b34c107.nbcnews-fp-1200-630.jpg",
+      "publishedAt": "2019-01-22T20:03:00Z",
+      "content": "Breaking News Emails Get breaking news alerts and special reports. The news and stories that matter, delivered weekday mornings. SUBSCRIBE Jan. 22, 2019, 8:03 PM GMT The cost of insulin for treating Type 1 diabetes in the United States nearly doubled over a r… [+4377 chars]"
+    },
+    {
+      "source": {
+        "id": "reuters",
+        "name": "Reuters"
+      },
+      "author": "Reuters Editorial",
+      "title": "U.S. will seek extradition of Huawei CFO from Canada - Reuters",
+      "description": "The U.S. Justice Department said on Tuesday it will pursue the extradition of the chief financial officer of China's Huawei Technologies Co Ltd's [HWT.UL], arrested in Canada in December.",
+      "url": "https://www.reuters.com/article/us-usa-china-huawei-tech/us-will-seek-extradition-of-huawei-cfo-from-canada-idUSKCN1PG2HL",
+      "urlToImage": "https://s4.reutersmedia.net/resources/r/?m=02&d=20190122&t=2&i=1348630336&w=1200&r=LYNXNPEF0L1V8",
+      "publishedAt": "2019-01-22T19:38:00Z",
+      "content": "WASHINGTON/DAVOS, Switzerland (Reuters) - The U.S. Justice Department said on Tuesday it will pursue the extradition of the chief financial officer of China’s Huawei Technologies Co Ltd’s [HWT.UL], arrested in Canada in December. The United States has accused… [+2564 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Washingtonexaminer.com"
+      },
+      "author": "https://www.washingtonexaminer.com/author/becket-adams",
+      "title": "New York Daily News searches desperately for real dirt on Covington students, accuses them of 'blackface' - Washington Examiner",
+      "description": "Certain newsrooms are in bargaining mode over the Covington Catholic fiasco.",
+      "url": "https://www.washingtonexaminer.com/opinion/new-york-daily-news-searches-desperately-for-real-dirt-on-covington-students-accuses-them-of-blackface",
+      "urlToImage": "https://mediadc.brightspotcdn.com/dims4/default/26a9cbf/2147483647/strip/true/crop/2290x1202+0+40/resize/1200x630!/quality/90/?url=https%3A%2F%2Fmediadc.brightspotcdn.com%2Fdf%2F7a%2Fd94b7130400bb25261e199ed782c%2Fcovington-catholic-hs-student.jpg",
+      "publishedAt": "2019-01-22T18:56:00Z",
+      "content": "C ertain newsrooms are in bargaining mode over the Covington Catholic fiasco. The narrative alleging that an elderly Native American man was harassed this weekend by a group of racist, white high school students at the March for Life has fallen apart, leaving… [+4750 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Gizmodo.com"
+      },
+      "author": "Maddie Stone",
+      "title": "Greenland's Ice Can No Longer Handle Hot Summers - Gizmodo",
+      "description": "A team of scientists is warning that the double whammy of a naturally recurring weather pattern and rising temperatures is triggering dramatic melting on the Greenland ice sheet—a problem the researchers liken to recent global coral bleaching events, which ha…",
+      "url": "https://earther.gizmodo.com/greenlands-ice-can-no-longer-handle-hot-summers-1831951993",
+      "urlToImage": "https://i.kinja-img.com/gawker-media/image/upload/s--tUuwjXUL--/c_fill,fl_progressive,g_center,h_900,q_80,w_1600/mukconkda0eutnihoam7.jpg",
+      "publishedAt": "2019-01-22T18:50:00Z",
+      "content": "A team of scientists is warning that the double whammy of a naturally recurring weather pattern and rising temperatures is triggering dramatic melting on the Greenland ice sheeta problem the researchers liken to recent global coral bleaching events, which hav… [+3999 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Npr.org"
+      },
+      "author": "Laurel Wamsley",
+      "title": "American Held In Russia Unwittingly Got Thumb Drive With State Secrets, Lawyer Says - NPR",
+      "description": "When a Russian citizen handed him a memory stick, Paul Whelan thought it contained travel snapshots, his lawyer told reporters. Whelan was denied bail at his first court appearance.",
+      "url": "https://www.npr.org/2019/01/22/687431681/american-held-in-russia-unwittingly-got-thumb-drive-with-state-secrets-lawyer-sa",
+      "urlToImage": "https://media.npr.org/assets/img/2019/01/22/gettyimages-1086102448_wide-dbea332dd84217c3e20a84c662194c8a4c944403.jpg?s=1400",
+      "publishedAt": "2019-01-22T18:22:00Z",
+      "content": "Paul Whelan, the American who has been detained by Russia on suspicion of espionage, stands in a glass cage for a hearing in Moscow on Tuesday. Sefa Karacan/Anadolu Agency/Getty Images Before Paul Whelan was detained in Moscow and accused of spying, he was gi… [+3103 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Inforum.com"
+      },
+      "author": null,
+      "title": "Chris Brown detained in Paris after rape allegations, reports say - INFORUM",
+      "description": "The R&B star was taken into custody after a 24-year-old woman filed a rape complaint.",
+      "url": "https://www.inforum.com/entertainment/music/956339-Chris-Brown-detained-in-Paris-after-rape-allegations-reports-say",
+      "urlToImage": "https://www.inforum.com/956342-7s3mx6-Chris-Brown-2012/alternates/BASE_LANDSCAPE/Chris%20Brown%202012",
+      "publishedAt": "2019-01-22T18:00:00Z",
+      "content": "R&amp;B star Chris Brown has been detained in Paris after being accused of rape, according to news reports. The American singer was taken into custody on potential charges of aggravated rape and drug infractions, the Associated Press reported, citing a French… [+1607 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Iheart.com"
+      },
+      "author": "Michael Lingard",
+      "title": "Why Is Laser-Gate Getting No Coverage? - Fox Sports Radio",
+      "description": "Colin Cowherd addresses the laser being shined on Tom Brady during the AFC Championship.",
+      "url": "https://foxsportsradio.iheart.com/content/2019-01-22-why-is-laser-gate-getting-no-coverage/",
+      "urlToImage": "https://i.iheart.com/v3/re/new_assets/1e038387-8fae-43b9-b922-337df1501c0d",
+      "publishedAt": "2019-01-22T17:52:00Z",
+      "content": "Colin Cowherd addresses the laser being shined on Tom Brady during the AFC Championship. He believes that if this had happened to Patrick Mahomes in Foxborough, the media would have coined this Laser-Gate and would be destroying the Patriots and calling them … [+91 chars]"
+    },
+    {
+      "source": {
+        "id": "nbc-news",
+        "name": "NBC News"
+      },
+      "author": "Maggie Fox",
+      "title": "Measles outbreaks make 2018 a near-record year for U.S. - NBCNews.com",
+      "description": "Measles outbreaks in Clark, County, Washington and in the New York City area are ongoing and helped make 2018 the second-worst year for the virus since 2000.",
+      "url": "https://www.nbcnews.com/storyline/measles-outbreak/measles-outbreaks-make-2018-near-record-year-u-s-n961276",
+      "urlToImage": "https://media4.s-nbcnews.com/j/newscms/2019_04/2725051/190122-measles-vaccination-al-1204_b1fc6fe602a56df29f25c2eea816747e.nbcnews-fp-1200-630.jpg",
+      "publishedAt": "2019-01-22T17:44:00Z",
+      "content": "Breaking News Emails Get breaking news alerts and special reports. The news and stories that matter, delivered weekday mornings. SUBSCRIBE Jan. 22, 2019, 5:44 PM GMT Health officials in one county in Washington have declared a public health emergency because … [+5924 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Washingtonexaminer.com"
+      },
+      "author": "https://www.washingtonexaminer.com/author/tom-rogan",
+      "title": "Why Trump should recognize Venezuela's opposition leader as president - Washington Examiner",
+      "description": "President Trump should recognize Venezuelan opposition leader Juan Guaido as president of that nation. Doing so would pressure fraudulently elected president Nicolas Maduro's corrupt regime by inspiring new opposition to him, and making clear that those who s…",
+      "url": "https://www.washingtonexaminer.com/opinion/why-trump-should-recognize-venezuelas-opposition-leader-as-president",
+      "urlToImage": "https://mediadc.brightspotcdn.com/dims4/default/a47916e/2147483647/strip/true/crop/2290x1202+0+0/resize/1200x630!/quality/90/?url=https%3A%2F%2Fmediadc.brightspotcdn.com%2F3b%2F35%2Febb08ea6402ca5821ceb48af0b14%2Fjuan-guaido.jpg",
+      "publishedAt": "2019-01-22T17:31:00Z",
+      "content": "P resident Trump should recognize Venezuelan opposition leader Juan Guaido as president of that nation. Doing so would pressure fraudulently elected president Nicolas Maduro's corrupt regime by inspiring new opposition to him, and making clear that those who … [+3089 chars]"
+    }
+  ]
+}

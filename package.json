@@ -12,6 +12,7 @@
     "dotenv": "^6.2.0",
     "express": "^4.16.4",
     "json-fs-store": "^1.0.1",
+    "node-cron": "^2.0.3",
     "request": "^2.88.0"
   }
 }

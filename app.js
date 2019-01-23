@@ -36,10 +36,9 @@ cron.schedule('0 0 0 * * *', () => {    // runs every midnight
   });
 
 app.get('/', function (req, res) {
-    res.send('Welcome to the factfulnews API! Enter a more specific url to access more!')
+    res.send('Welcome to the Factfulnews API!')
 })
 
-// /all should return 10 article headlines/images right now
 app.get('/all', function (req, res) {
     var result = [];
     store.load('all', function(err, articleObj){

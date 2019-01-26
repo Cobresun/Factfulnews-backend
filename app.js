@@ -1,8 +1,8 @@
 const express = require('express')
 const request = require('request')
 require('dotenv').config()
-var store = require('json-fs-store')();
-var cron = require('node-cron');
+let store = require('json-fs-store')();
+let cron = require('node-cron');
 const app = express()
 const LOCAL_PORT = 3000
 const newsAPIKey = process.env.NEWS_API
@@ -18,8 +18,8 @@ function fetch(){
         }
         console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
         const bod = JSON.parse(body);
-        var articles = bod.articles
-        var articleList = {
+        let articles = bod.articles
+        let articleList = {
             id: 'all',
             articles: articles,
         };
@@ -31,7 +31,7 @@ function fetch(){
 
 fetch()
 cron.schedule('0 0 0 * * *', () => {    // runs every midnight
-    console.log('running a task every midnight');
+    console.log('running a task every minute');
     fetch()
   });
 
@@ -41,10 +41,10 @@ app.get('/', function (req, res) {
 
 // /all should return 10 article headlines/images right now
 app.get('/all', function (req, res) {
-    var result = [];
+    let result = [];
     store.load('all', function(err, articleObj){
         if(err) throw err; // err if JSON parsing failed
-        var articleList = articleObj.articles.slice(0, 10)
+        let articleList = articleObj.articles.slice(0, 10)
         articleList.forEach(article => {
             result.push({title:article.title, urlToImage:article.urlToImage, snippet:article.content})
         });

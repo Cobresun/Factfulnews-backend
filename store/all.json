@@ -3,55 +3,172 @@
   "articles": [
     {
       "source": {
-        "id": "cnn",
-        "name": "CNN"
+        "id": null,
+        "name": "Avclub.com"
       },
-      "author": "Sara Murray, CNN",
-      "title": "Mueller wants to know about 2016 Trump campaign's ties to NRA - CNN",
-      "description": "Special counsel Robert Mueller's team has expressed interest in the Trump campaign's relationship with the National Rifle Association during the 2016 campaign.",
-      "url": "https://www.cnn.com/2019/01/22/politics/mueller-nunberg-trump-campaign-nra/index.html",
-      "urlToImage": "https://cdn.cnn.com/cnnnext/dam/assets/160520165709-donald-trump-may-20-2016-super-tease.jpg",
-      "publishedAt": "2019-01-22T21:56:00Z",
-      "content": null
+      "author": "Caroline Siede",
+      "title": "This Is Us uses its latest twist to complicate the legacy of Jack Pearson - The A.V. Club",
+      "description": "After easing us back into the season with last week’s lackluster outing, This Is Us finally circles around to that big reveal from the mid-season finale: Nicholas Pearson is alive and living in a trailer in Bradford, Pennsylvania. As I wrote in my review of t…",
+      "url": "https://tv.avclub.com/this-is-us-uses-its-latest-twist-to-complicate-the-lega-1831963194",
+      "urlToImage": "https://i.kinja-img.com/gawker-media/image/upload/s--_c3piV2u--/c_fill,fl_progressive,g_center,h_900,q_80,w_1600/uj1xdsiz2ykrpmzniwbo.jpg",
+      "publishedAt": "2019-01-23T03:00:00Z",
+      "content": "After easing us back into the season with last weeks lackluster outing, This Is Us finally circles around to that big reveal from the mid-season finale: Nicholas Pearson is alive and living in a trailer in Bradford, Pennsylvania. As I wrote in my review of th… [+8269 chars]"
     },
     {
       "source": {
         "id": null,
-        "name": "Mlb.com"
+        "name": "Russianmachineneverbreaks.com"
       },
       "author": null,
-      "title": "Timeline of Mariano Rivera's career - MLB.com",
-      "description": "Mariano Rivera knew that it was the final appearance of his illustrious career, and the future Hall of Famer was fighting off what he would describe as a \"bombardment of emotions,\" attempting to summon the strength to finish. Spotting two familiar figures asc…",
-      "url": "https://www.mlb.com/news/timeline-of-mariano-riveras-career/c-302985836",
-      "urlToImage": "https://securea.mlb.com/assets/images/6/9/0/302987690/cuts/960x540/cut.jpg",
-      "publishedAt": "2019-01-22T21:33:37Z",
-      "content": "Mariano Rivera knew that it was the final appearance of his illustrious career, and the future Hall of Famer was fighting off what he would describe as a \"bombardment of emotions,\" attempting to summon the strength to finish. Spotting two familiar figures asc… [+7663 chars]"
+      "title": "Alex Ovechkin scores 23rd career hat trick against Sharks - Russian Machine Never Breaks",
+      "description": "Washington Capitals captain Alex Ovechkin did his best to help the Capitals end their longest losing streak in four years. The Russian machine scored a hat trick against the San Jose Sharks, the 23rd of his career, and registered four...",
+      "url": "https://russianmachineneverbreaks.com/2019/01/22/alex-ovechkin-scores-23rd-career-hat-trick-against-sharks-%F0%9F%8E%A9/",
+      "urlToImage": "https://i1.wp.com/russianmachineneverbreaks.com/wp-content/uploads/2019/01/alex-ovechkin-hat-trick.jpg?fit=1200%2C600&ssl=1",
+      "publishedAt": "2019-01-23T02:57:47Z",
+      "content": "Washington Capitals captain Alex Ovechkin did his best to help the Capitals end their longest losing streak in four years. The Russian machine scored a hat trick against the San Jose Sharks, the 23rd of his career, and registered four points. Ovi’s third goal… [+581 chars]"
     },
     {
       "source": {
-        "id": "cnbc",
-        "name": "CNBC"
+        "id": null,
+        "name": "Youtube.com"
       },
-      "author": "Sarah Whitten",
-      "title": "Here's why you won't be able to see Netflix's best picture nominee 'Roma' at most theaters - CNBC",
-      "description": "AMC Theatres and Regal Cinemas have both declined to show Netflix's \"Roma\" at their theaters following the Oscar nominations Tuesday.",
-      "url": "https://www.cnbc.com/2019/01/22/you-cant-see-netflixs-best-picture-nominee-roma-at-most-theaters.html",
-      "urlToImage": "https://fm.cnbc.com/applications/cnbc.com/resources/img/editorial/2019/01/22/105691719-1548159874697aef6fd8893ee6267cd36c12a1961fc627cea7a7b.1910x1000.jpg",
-      "publishedAt": "2019-01-22T21:29:47Z",
-      "content": "Netflix's critically acclaimed film \"Roma\" may have landed the streaming platform its first ever best picture Academy Award nomination, but that doesn't mean it will be headed to the big screen. div &gt; div.group &gt; p:first-child\"&gt; In the wake of the an… [+1937 chars]"
+      "author": null,
+      "title": "Serena Williams v Karolina Pliskova first set highlights (QF) | Australian Open 2019 - Australian Open TV",
+      "description": "Serena Williams v Karolina Pliskova first set highlights (QF)",
+      "url": "https://www.youtube.com/watch?v=Mpj1LyZ1ktI",
+      "urlToImage": "https://i.ytimg.com/vi/Mpj1LyZ1ktI/maxresdefault.jpg",
+      "publishedAt": "2019-01-23T02:55:41Z",
+      "content": "Serena Williams v Karolina Pliskova first set highlights (QF)"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Latimes.com"
+      },
+      "author": "Matthew Ormseth, Ruben Vives, Sonali Kohli, Andrea Castillo",
+      "title": "Tentative deal to end LAUSD teachers’ strike brings celebration and disappointment - Los Angeles Times",
+      "description": "How people are feeling now that the LAUSD teachers' strike nears and end and United Teachers Los Angeles and L.A. Unified have announced a tentative agreement.",
+      "url": "https://www.latimes.com/local/lanow/la-me-edu-teachers-strike-reaction-20190122-story.html",
+      "urlToImage": "https://www.latimes.com/resizer/Dx9gGByPf0TY56R5OieNirleVnY=/1200x0/www.trbimg.com/img-5c47d636/turbine/la-me-edu-teachers-strike-reaction-20190122",
+      "publishedAt": "2019-01-23T02:30:00Z",
+      "content": "Los Angeles teachers, students and parents reacted with exhilaration — and, for some, disappointment — after union leaders reached a tentative agreement Tuesday with the L.A. Unified School District to end the strike, more than a week after it started. The mo… [+4934 chars]"
+    },
+    {
+      "source": {
+        "id": "usa-today",
+        "name": "USA Today"
+      },
+      "author": "Ryan W. Miller",
+      "title": "A blood test may detect whether Alzheimer's will develop 16 years before symptoms show, study says - USA TODAY",
+      "description": "While no cure exists yet for Alzheimer's disease, the research could help in testing treatment options, the study's lead author said.",
+      "url": "https://www.usatoday.com/story/news/health/2019/01/22/alzheimers-could-predicted-up-16-years-ahead-symptoms-study/2651012002/",
+      "urlToImage": "https://www.gannett-cdn.com/-mm-/3b8b0abcb585d9841e5193c3d072eed1e5ce62bc/c=0-30-580-356/local/-/media/2018/09/28/USATODAY/usatsports/hand-holding-test-tubes_large.jpg?width=3200&height=1680&fit=crop",
+      "publishedAt": "2019-01-23T02:19:00Z",
+      "content": "New research suggests MRI brain scans are better at predicting Alzheimers disease than common clinical tests. Veuer's Mercer Morrison has the story. Buzz60 Doctors may be able to predict if someone will develop Alzheimer's disease up to 16 years before they s… [+3059 chars]"
     },
     {
       "source": {
         "id": "cnn",
         "name": "CNN"
       },
-      "author": "Brian Lowry, CNN",
-      "title": "'Black Panther,' 'Roma' lead Oscars into new frontiers - CNN",
-      "description": "Oscar nominations analysis: 'Black Panther,' 'Roma' lead Oscars into new frontiers, as superheroes and Netflix officially join the party",
-      "url": "https://www.cnn.com/2019/01/22/entertainment/oscar-nominations-analysis/index.html",
-      "urlToImage": "https://cdn.cnn.com/cnnnext/dam/assets/180823181800-11-netflix-hulu-amazon-september-super-tease.jpg",
-      "publishedAt": "2019-01-22T21:21:00Z",
-      "content": "(CNN) Eight movies were nominated for best picture on Tuesday, but there are two that couldn't be more different -- \" Black Panther,\" the Marvel blockbuster; and \" Roma,\" Alfonso Cuarón's black-and-white Netflix film -- might be the most significant in terms … [+3995 chars]"
+      "author": "Paul P. Murphy and Gianluca Mezzofiore, CNN",
+      "title": "How the video confrontation between Catholic students and a Native American elder blew up - CNN",
+      "description": "The discussion over what happened between competing groups of people on the steps of the Lincoln Memorial on Friday doesn't appear to be going away anytime soon.",
+      "url": "https://www.cnn.com/2019/01/22/us/lincoln-memorial-rally-video-viral-trnd/index.html",
+      "urlToImage": "https://cdn.cnn.com/cnnnext/dam/assets/190122155057-04-lincoln-memorial-rally-super-tease.jpg",
+      "publishedAt": "2019-01-23T01:47:00Z",
+      "content": null
+    },
+    {
+      "source": {
+        "id": "fox-news",
+        "name": "Fox News"
+      },
+      "author": null,
+      "title": "Sarah Sanders: White House not listening to Ocasio-Cortez 'on much of anything,' including doomsday prediction - Fox News",
+      "description": "White House Press Secretary Sarah Sanders derided New York Democratic Rep. Alexandria Ocasio-Cortez's recent claim that the world will end in 12 years due to climate change, and suggested the Trump administration has little need for the progressive firebrand'…",
+      "url": "https://www.foxnews.com/politics/sanders-white-house-not-listening-to-ocasio-cortez-on-much-of-anything-including-doomsday-prediction",
+      "urlToImage": "https://media2.foxnews.com/BrightCove/694940094001/2019/01/23/694940094001_5992582142001_5992584734001-vs.jpg",
+      "publishedAt": "2019-01-23T01:39:39Z",
+      "content": "White House Press Secretary Sarah Sanders derided New York Democratic Rep. Alexandria Ocasio-Cortez's recent claim that the world will end in 12 years due to climate change, and suggested the Trump administration has little need for the progressive firebrand'… [+7786 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Tmz.com"
+      },
+      "author": "TMZ Staff",
+      "title": "Chris Brown Will Sue Alleged Rape Victim for Defamation - TMZ",
+      "description": "Chris Brown will sue the woman accusing him of rape in Paris for defamation.",
+      "url": "https://www.tmz.com/2019/01/22/chris-brown-sue-rape-victim-defamation/",
+      "urlToImage": "https://images.tmz.com/2019/01/22/0122-chris-brown-tmz-04-1200x630.jpg",
+      "publishedAt": "2019-01-23T01:31:00Z",
+      "content": null
+    },
+    {
+      "source": {
+        "id": "fox-news",
+        "name": "Fox News"
+      },
+      "author": "Samuel Chamberlain",
+      "title": "Judge strikes down Iowa 'fetal heartbeat' abortion law - Fox News",
+      "description": "An Iowa judge struck down a state law Tuesday that would ban a woman from obtaining an abortion once a fetus' heartbeat is detected, saying it violated the state's constitution.",
+      "url": "https://www.foxnews.com/politics/judge-strikes-down-iowa-fetal-heartbeat-abortion-law",
+      "urlToImage": "https://static.foxnews.com/foxnews.com/content/uploads/2018/09/22b8a6d0-ultrasound2.jpg",
+      "publishedAt": "2019-01-23T01:27:29Z",
+      "content": "An Iowa judge struck down a state law Tuesday banning a woman from obtaining an abortion once a fetus' heartbeat is detected, saying it violated the state's constitution. Judge Michael Huppert wrote that the measure was counter to \"both the due process and eq… [+3487 chars]"
+    },
+    {
+      "source": {
+        "id": "nbc-news",
+        "name": "NBC News"
+      },
+      "author": "Doha Madani",
+      "title": "Parents of Arizona woman in vegetative state who gave birth say she's 'not in a coma' - NBC News",
+      "description": "The parents of a woman in a vegetative state who gave birth in December at Hacienda HealthCare in Phoenix, Arizona released a statement Tuesday about their daughter's long-term condition.",
+      "url": "https://www.nbcnews.com/news/us-news/parents-arizona-woman-vegetative-state-who-gave-birth-say-she-n961431",
+      "urlToImage": "https://media2.s-nbcnews.com/j/newscms/2019_02/2709046/190108-hacienda-healthcare-ac-753p_aaf879508dfd3bcf07c382e099c2729e.nbcnews-fp-1200-630.jpg",
+      "publishedAt": "2019-01-23T01:17:08Z",
+      "content": "Get breaking news alerts and special reports. The news and stories that matter, delivered weekday mornings. SUBSCRIBE Jan. 23, 2019, 1:16 AM GMT The parents of an Arizona woman in a vegetative state who gave birth released a statement Tuesday that they said s… [+1828 chars]"
+    },
+    {
+      "source": {
+        "id": "cnn",
+        "name": "CNN"
+      },
+      "author": "Nicole Chavez, CNN",
+      "title": "A transgender Army sergeant says ban won't stop Americans from serving their country - CNN",
+      "description": "Hours after the Supreme Court gave the green light to President Donald Trump's transgender military ban, Army Staff Sgt. Patricia King was not ready to give up hope.",
+      "url": "https://www.cnn.com/2019/01/22/politics/patricia-king-transgender-ban-reaction/index.html",
+      "urlToImage": "https://cdn.cnn.com/cnnnext/dam/assets/190122165431-patricia-king-super-tease.jpg",
+      "publishedAt": "2019-01-23T01:17:00Z",
+      "content": "(CNN) Hours after the Supreme Court gave the green light to President Donald Trump's transgender military ban, Army Staff Sgt. Patricia King was not ready to give up hope. The ban \"gives a false sense of credibility to the inaccurate notion that transgender p… [+2400 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Marketwatch.com"
+      },
+      "author": "Max A. Cherney",
+      "title": "Green Growth makes hostile bid for Aphria official - MarketWatch",
+      "description": "U.S.-based cannabis producer Green Growth Brands Inc. has made a formal offer to Aphria Inc. shareholders to acquire the company.",
+      "url": "https://www.marketwatch.com/story/green-growth-makes-hostile-bid-for-aphria-official-2019-01-22",
+      "urlToImage": "http://s.marketwatch.com/public/resources/MWimages/MW-GR847_Aphria_ZG_20181016110306.jpg",
+      "publishedAt": "2019-01-23T01:05:00Z",
+      "content": "U.S.-based cannabis producer Green Growth Brands Inc. made a formal offer to Aphria Inc. shareholders to acquire the company Tuesday, nearly four weeks after the Ohio company originally announced plans for the bid. Green Growth GGBXF, +6.94% offered Aphria AP… [+2840 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Eonline.com"
+      },
+      "author": "Cydney Contreras",
+      "title": "Breaking Down Ariana Grande's Thank U, NextAlbum Track List - E! NEWS",
+      "description": "Song titles include \"break up with your girlfriend\" and \"NASA\"",
+      "url": "https://www.eonline.com/news/1007457/breaking-down-ariana-grande-s-newly-unveiled-thank-u-next-album-track-list",
+      "urlToImage": "https://akns-images.eonline.com/eol_images/Entire_Site/2019017/rs_600x600-190117134344-600-Ariana-grande-7-rings-music-video-instagram-photos-cc.11719.jpg?fit=around|600:467&crop=600:467;center,top&output-quality=90",
+      "publishedAt": "2019-01-23T01:00:00Z",
+      "content": "Get ready, because Ariana Grande is gearing up to release her newest album. The pop star just dropped the final track-list for the Thank U, Next album and fans are already busy deciphering the meaning behind the titles. Clearly, the songstress draws inspirati… [+585 chars]"
     },
     {
       "source": {
@@ -59,77 +176,77 @@
         "name": "Engadget"
       },
       "author": "Kris Holt",
-      "title": "Alphabet made a quiz to help you detect phishing scams - Engadget",
-      "description": "Alphabet's Jigsaw project wants to play a game.",
-      "url": "https://www.engadget.com/2019/01/22/alphabet-google-jigsaw-phishing-scam-quiz/",
-      "urlToImage": "https://o.aolcdn.com/images/dims?thumbnail=1200%2C630&quality=80&image_uri=https%3A%2F%2Fo.aolcdn.com%2Fimages%2Fdims%3Fresize%3D2000%252C2000%252Cshrink%26image_uri%3Dhttps%253A%252F%252Fs.yimg.com%252Fos%252Fcreatr-uploaded-images%252F2019-01%252F6b576300-1e8a-11e9-bfe1-89eb7f43d747%26client%3Da1acac3e1b3290917d92%26signature%3Dcf4c278ef608d546e945bb068293204372db9912&client=amp-blogside-v2&signature=f0785e4185c4006bd9b33b542df2244059f36c76",
-      "publishedAt": "2019-01-22T21:03:16Z",
-      "content": "The company's Jigsaw unit wants to play a game, as it has created a quiz for you to test your phishing-detection skills in case spammy emails slip through your email service's filters and reach your inbox. The team drew from materials Jigsaw has used to train… [+480 chars]"
-    },
-    {
-      "source": {
-        "id": "the-verge",
-        "name": "The Verge"
-      },
-      "author": "Julia Alexander",
-      "title": "Twitter is rolling out a new web interface, including an emoji button - The Verge",
-      "description": "Twitter is updating its desktop version for some users, which will include aesthetic and functional changes. One of the biggest changes is a dedicated emoji button.",
-      "url": "https://www.theverge.com/2019/1/22/18193322/twitter-desktop-update-emoji-trending-search",
-      "urlToImage": "https://cdn.vox-cdn.com/thumbor/zCX0QSQz6obVNigjxznYOx444C4=/0x45:2866x1546/fit-in/1200x630/cdn.vox-cdn.com/uploads/chorus_asset/file/13706845/Screen_Shot_2019_01_22_at_3.30.17_PM.png",
-      "publishedAt": "2019-01-22T21:03:11Z",
-      "content": "Twitter has started to roll out a new interface for its web users that includes several key features, like a newly designed emoji button. The most important changes are tiny shortcuts to make tweeting easier. A large, dedicated button in the tweet box makes i… [+757 chars]"
+      "title": "GMC’s next Sierra HD pickup can see through trailers - Engadget",
+      "description": "The truck might let you control your compatible trailer's air conditioning and water heater from your cab.",
+      "url": "https://www.engadget.com/2019/01/22/gmc-2020-sierra-hd-pickup-camera-system-infotainment/",
+      "urlToImage": "https://o.aolcdn.com/images/dims?thumbnail=1200%2C630&quality=80&image_uri=https%3A%2F%2Fs.yimg.com%2Fos%2Fcreatr-uploaded-images%2F2019-01%2F242dea20-1e95-11e9-91ae-9dd141c19d48&client=amp-blogside-v2&signature=b7ef2a5f4298db276ae5ee8bd58923142b696cc7",
+      "publishedAt": "2019-01-23T00:15:29Z",
+      "content": "The truck includes a smart trailer system which allows you, with compatible trailers, to turn on the air conditioning and water heater, and keep an eye on generator fuel levels using a mobile app. You may also control the trailer through the infotainment syst… [+271 chars]"
     },
     {
       "source": {
         "id": null,
-        "name": "Washingtonexaminer.com"
+        "name": "Youtube.com"
       },
-      "author": "https://www.washingtonexaminer.com/author/nicole-russell",
-      "title": "Trump's military transgender ban is more reasonable than you think - Washington Examiner",
-      "description": "The Supreme Court announced on Tuesday in a 5-4 decision that they would allow the transgender military ban to go into effect while the lower courts continued to hammer out the issue. To be clear, they did not rule on the merits of the case (whether the presi…",
-      "url": "https://www.washingtonexaminer.com/opinion/trumps-military-transgender-ban-is-more-reasonable-than-you-think",
-      "urlToImage": "https://mediadc.brightspotcdn.com/dims4/default/5f1f3e4/2147483647/strip/true/crop/2290x1202+0+0/resize/1200x630!/quality/90/?url=https%3A%2F%2Fmediadc.brightspotcdn.com%2F36%2F6f%2Fad7dc94b49cd8116492e5bd7247a%2Ftrump-millitary-ttans-ban.jpg",
-      "publishedAt": "2019-01-22T20:58:00Z",
-      "content": "T he Supreme Court announced on Tuesday in a 5-4 decision that they would allow the transgender military ban to go into effect while the lower courts continued to hammer out the issue. To be clear, they did not rule on the merits of the case (whether the pres… [+4081 chars]"
+      "author": null,
+      "title": "New England Patriots vs. Los Angeles Rams | Super Bowl LIII Preview | Move the Sticks - NFL",
+      "description": "Move the Sticks previews Super Bowl LIII between the New England Patriots and the Los Angeles Rams. Subscribe to NFL: http://j.mp/1L0bVBu Check out our other...",
+      "url": "https://www.youtube.com/watch?v=VguE-KPNqIE",
+      "urlToImage": "https://i.ytimg.com/vi/VguE-KPNqIE/maxresdefault.jpg",
+      "publishedAt": "2019-01-23T00:00:01Z",
+      "content": "Move the Sticks previews Super Bowl LIII between the New England Patriots and the Los Angeles Rams. Subscribe to NFL: http://j.mp/1L0bVBu Check out our other channels: NFL Vault http://www.youtube.com/nflvault NFL Network http://www.youtube.com/nflnetwork NFL… [+110 chars]"
+    },
+    {
+      "source": {
+        "id": "the-hill",
+        "name": "The Hill"
+      },
+      "author": "Jordain Carney",
+      "title": "GOP seeks to change narrative in shutdown fight - The Hill",
+      "description": "President Trump and congressional Republicans are trying to change the narrative on Democrats as the partial shutdown drags into its fifth week.",
+      "url": "https://thehill.com/homenews/senate/426511-gop-seeks-to-change-narrative-in-shutdown-fight",
+      "urlToImage": "https://thehill.com/sites/default/files/mcconnellmitch_trumpdonald_pelosinancy_012218gngetty_lead.jpg",
+      "publishedAt": "2019-01-22T23:39:43Z",
+      "content": "President Trump Donald John Trump Trump claims media 'smeared' students involved in encounter with Native American man Al Sharpton criticizes Trumps secret visit to MLK monument Gillibrand cites spirituality in 2020 fight against Trumps dark values MORE and c… [+9066 chars]"
     },
     {
       "source": {
         "id": null,
-        "name": "Thedailybeast.com"
+        "name": "Espn.com"
       },
-      "author": "Audrey McNamara",
-      "title": "Four Accused of Plotting to Attack Muslim Community - The Daily Beast",
-      "description": "Investigators say they recovered 23 rifles and shotguns, all legal weapons, from multiple homes.",
-      "url": "https://www.thedailybeast.com/four-accused-of-plotting-to-attack-muslim-community",
-      "urlToImage": "https://img.thedailybeast.com/image/upload/c_crop,d_placeholder_euli9k,h_1440,w_2560,x_0,y_0/dpr_2.0/c_limit,w_740/fl_lossy,q_auto/v1548187991/police_tape_3_u321ik",
-      "publishedAt": "2019-01-22T20:47:55Z",
-      "content": "Police in Greece, New York, have arrested and charged four suspects who allegedly planned to attack a nearby Muslim community. The four men were each charged with three counts of criminal possession of a weapon and one count of conspiracy. According to court … [+1155 chars]"
+      "author": null,
+      "title": "Mariano Rivera, Edgar Martinez, Roy Halladay, Mike Mussina elected Baseball Hall Fame - ESPN",
+      "description": "Mariano Rivera, Edgar Martinez, Roy Halladay and Mike Mussina were voted into the Baseball Hall of Fame on Tuesday. Rivera became the first played ever voted unanimously into the Hall.",
+      "url": "http://www.espn.com/mlb/story/_/id/25826814/mariano-rivera-edgar-martinez-roy-halladay-mike-mussina-elected-baseball-hall-fame",
+      "urlToImage": "https://a.espncdn.com/combiner/i?img=%2Fphoto%2F2019%2F0121%2Fr491751_1296x729_16%2D9.jpg",
+      "publishedAt": "2019-01-22T23:38:53Z",
+      "content": "Closer Mariano Rivera, designated hitter Edgar Martinez and starting pitchers Roy Halladay and Mike Mussina will be the newest members of the Baseball Hall of Fame. Rivera became the first player to be unanimously voted into the Hall, appearing on all 425 bal… [+10049 chars]"
     },
     {
       "source": {
         "id": null,
-        "name": "Aol.com"
+        "name": "Venturebeat.com"
       },
-      "author": "Jennifer Starks",
-      "title": "North Carolina judge refuses to certify Republican as winner of U.S. House vote - AOL",
-      "description": "A North Carolina judge rejected Mark Harris' bid to be certified as the winner of a congressional vote at the center of an election fraud investigation.",
-      "url": "https://www.aol.com/article/news/2019/01/22/judge-refuses-to-certify-republican-as-winner-of-house-vote/23649930/",
-      "urlToImage": "https://o.aolcdn.com/images/dims3/GLOB/legacy_thumbnail/1028x675/format/jpg/quality/85/http%3A%2F%2Fmedia.zenfs.com%2Fen_us%2FNews%2Fap_webfeeds%2F40ae5e946b5f4cb2ae2d162f8bf6c766.jpg",
-      "publishedAt": "2019-01-22T20:36:29Z",
-      "content": "A North Carolina judge on Tuesday rejected Republican Mark Harris' bid to be certified as the winner of a congressional vote at the center of an election fraud investigation, saying doing so would be a \"dramatic intervention.\" Harris claimed victory over Demo… [+5474 chars]"
+      "author": "Jeff Grubb",
+      "title": "December 2018 NPD: Smash Bros. beats Spider-Man in exclusives battle - VentureBeat",
+      "description": "Super Smash Bros. Ultimate sales are unbelieveable. In the United States, it is the best-selling console exclusive ever tracked by The NPD Group.",
+      "url": "https://venturebeat.com/2019/01/22/december-2018-npd-smash-bros-beats-spider-man-in-exclusives-battle/",
+      "urlToImage": "https://venturebeat.com/wp-content/uploads/2018/12/2018112923293500-0E7DF678130F4F0FA2C88AE72B47AFDF.jpg?w=1200&strip=all",
+      "publishedAt": "2019-01-22T23:30:00Z",
+      "content": "Gaming fans in the United States spent $3.4 billion on video game software, hardware, and accessories in December, according to industry-tracking firm The NPD Group. That is up 2 percent year-over-year. The increase was due primarily to accessories and game-c… [+3990 chars]"
     },
     {
       "source": {
-        "id": "politico",
-        "name": "Politico"
+        "id": "bloomberg",
+        "name": "Bloomberg"
       },
-      "author": "https://www.facebook.com/andrew.restuccia",
-      "title": "White House forging ahead with State of the Union planning - POLITICO",
-      "description": "Officials intend to move forward until Nancy Pelosi publicly axes the event, a move that they believe would be seen as nakedly political.",
-      "url": "https://www.politico.com/story/2019/01/22/white-house-planning-state-of-the-union-1119849",
-      "urlToImage": "https://static.politico.com/73/69/1f6614624ed4b4228203f2a5a3f4/190122-trump-sotu-politico-773.jpg",
-      "publishedAt": "2019-01-22T20:29:00Z",
-      "content": "President Donald Trump, seen here before his 2018 State of the Union address, has been advised by senior White House aides to stick to tradition with a formal address from the House chamber, even though Speaker Nancy Pelosi has suggested he delay the speech d… [+4422 chars]"
+      "author": null,
+      "title": "U.K. Parliament Moves Closer to Stopping a No-Deal Brexit - Bloomberg",
+      "description": null,
+      "url": "https://www.bloomberg.com/news/articles/2019-01-22/u-k-parliament-moves-closer-to-stopping-a-no-deal-brexit",
+      "urlToImage": null,
+      "publishedAt": "2019-01-22T23:28:00Z",
+      "content": "To continue, please click the box below to let us know you're not a robot."
     },
     {
       "source": {
@@ -137,129 +254,12 @@
         "name": "The New York Times"
       },
       "author": null,
-      "title": "Brazil’s Bolsonaro is the Face of Populism at the Davos Forum - The New York Times",
-      "description": "President Jair Bolsonaro set the tone for a Davos gathering with many U.S. and European leaders absent this year, dealing with crises back home.",
-      "url": "https://www.nytimes.com/2019/01/22/world/americas/bolsonaro-populist-davos-forum.html",
-      "urlToImage": "https://static01.nyt.com/images/2019/01/23/world/23davos-bolsonaro/23davos-bolsonaro-facebookJumbo.jpg",
-      "publishedAt": "2019-01-22T20:12:21Z",
-      "content": "Prime Minister Theresa May of Britain, who is dealing with the chaos over Britains exit from the European Union, and President Emmanuel Macron of France, who is facing a wave of unrest from Yellow Vest protesters, both skipped this years meeting. Mr. Pompeo s… [+1791 chars]"
-    },
-    {
-      "source": {
-        "id": "nbc-news",
-        "name": "NBC News"
-      },
-      "author": "Reuters",
-      "title": "U.S. insulin costs per patient nearly doubled from 2012 to 2016, study finds - NBCNews.com",
-      "description": "The findings by the Health Care Cost Institute underline the growing national outcry over rising drug prices.",
-      "url": "https://www.nbcnews.com/health/diabetes/u-s-insulin-costs-patient-nearly-doubled-2012-2016-study-n961296",
-      "urlToImage": "https://media4.s-nbcnews.com/j/newscms/2019_04/2725156/190122-insulin-al-1303_6f05c3ad875daa660271bf9e7b34c107.nbcnews-fp-1200-630.jpg",
-      "publishedAt": "2019-01-22T20:03:00Z",
-      "content": "Breaking News Emails Get breaking news alerts and special reports. The news and stories that matter, delivered weekday mornings. SUBSCRIBE Jan. 22, 2019, 8:03 PM GMT The cost of insulin for treating Type 1 diabetes in the United States nearly doubled over a r… [+4377 chars]"
-    },
-    {
-      "source": {
-        "id": "reuters",
-        "name": "Reuters"
-      },
-      "author": "Reuters Editorial",
-      "title": "U.S. will seek extradition of Huawei CFO from Canada - Reuters",
-      "description": "The U.S. Justice Department said on Tuesday it will pursue the extradition of the chief financial officer of China's Huawei Technologies Co Ltd's [HWT.UL], arrested in Canada in December.",
-      "url": "https://www.reuters.com/article/us-usa-china-huawei-tech/us-will-seek-extradition-of-huawei-cfo-from-canada-idUSKCN1PG2HL",
-      "urlToImage": "https://s4.reutersmedia.net/resources/r/?m=02&d=20190122&t=2&i=1348630336&w=1200&r=LYNXNPEF0L1V8",
-      "publishedAt": "2019-01-22T19:38:00Z",
-      "content": "WASHINGTON/DAVOS, Switzerland (Reuters) - The U.S. Justice Department said on Tuesday it will pursue the extradition of the chief financial officer of China’s Huawei Technologies Co Ltd’s [HWT.UL], arrested in Canada in December. The United States has accused… [+2564 chars]"
-    },
-    {
-      "source": {
-        "id": null,
-        "name": "Washingtonexaminer.com"
-      },
-      "author": "https://www.washingtonexaminer.com/author/becket-adams",
-      "title": "New York Daily News searches desperately for real dirt on Covington students, accuses them of 'blackface' - Washington Examiner",
-      "description": "Certain newsrooms are in bargaining mode over the Covington Catholic fiasco.",
-      "url": "https://www.washingtonexaminer.com/opinion/new-york-daily-news-searches-desperately-for-real-dirt-on-covington-students-accuses-them-of-blackface",
-      "urlToImage": "https://mediadc.brightspotcdn.com/dims4/default/26a9cbf/2147483647/strip/true/crop/2290x1202+0+40/resize/1200x630!/quality/90/?url=https%3A%2F%2Fmediadc.brightspotcdn.com%2Fdf%2F7a%2Fd94b7130400bb25261e199ed782c%2Fcovington-catholic-hs-student.jpg",
-      "publishedAt": "2019-01-22T18:56:00Z",
-      "content": "C ertain newsrooms are in bargaining mode over the Covington Catholic fiasco. The narrative alleging that an elderly Native American man was harassed this weekend by a group of racist, white high school students at the March for Life has fallen apart, leaving… [+4750 chars]"
-    },
-    {
-      "source": {
-        "id": null,
-        "name": "Gizmodo.com"
-      },
-      "author": "Maddie Stone",
-      "title": "Greenland's Ice Can No Longer Handle Hot Summers - Gizmodo",
-      "description": "A team of scientists is warning that the double whammy of a naturally recurring weather pattern and rising temperatures is triggering dramatic melting on the Greenland ice sheet—a problem the researchers liken to recent global coral bleaching events, which ha…",
-      "url": "https://earther.gizmodo.com/greenlands-ice-can-no-longer-handle-hot-summers-1831951993",
-      "urlToImage": "https://i.kinja-img.com/gawker-media/image/upload/s--tUuwjXUL--/c_fill,fl_progressive,g_center,h_900,q_80,w_1600/mukconkda0eutnihoam7.jpg",
-      "publishedAt": "2019-01-22T18:50:00Z",
-      "content": "A team of scientists is warning that the double whammy of a naturally recurring weather pattern and rising temperatures is triggering dramatic melting on the Greenland ice sheeta problem the researchers liken to recent global coral bleaching events, which hav… [+3999 chars]"
-    },
-    {
-      "source": {
-        "id": null,
-        "name": "Npr.org"
-      },
-      "author": "Laurel Wamsley",
-      "title": "American Held In Russia Unwittingly Got Thumb Drive With State Secrets, Lawyer Says - NPR",
-      "description": "When a Russian citizen handed him a memory stick, Paul Whelan thought it contained travel snapshots, his lawyer told reporters. Whelan was denied bail at his first court appearance.",
-      "url": "https://www.npr.org/2019/01/22/687431681/american-held-in-russia-unwittingly-got-thumb-drive-with-state-secrets-lawyer-sa",
-      "urlToImage": "https://media.npr.org/assets/img/2019/01/22/gettyimages-1086102448_wide-dbea332dd84217c3e20a84c662194c8a4c944403.jpg?s=1400",
-      "publishedAt": "2019-01-22T18:22:00Z",
-      "content": "Paul Whelan, the American who has been detained by Russia on suspicion of espionage, stands in a glass cage for a hearing in Moscow on Tuesday. Sefa Karacan/Anadolu Agency/Getty Images Before Paul Whelan was detained in Moscow and accused of spying, he was gi… [+3103 chars]"
-    },
-    {
-      "source": {
-        "id": null,
-        "name": "Inforum.com"
-      },
-      "author": null,
-      "title": "Chris Brown detained in Paris after rape allegations, reports say - INFORUM",
-      "description": "The R&B star was taken into custody after a 24-year-old woman filed a rape complaint.",
-      "url": "https://www.inforum.com/entertainment/music/956339-Chris-Brown-detained-in-Paris-after-rape-allegations-reports-say",
-      "urlToImage": "https://www.inforum.com/956342-7s3mx6-Chris-Brown-2012/alternates/BASE_LANDSCAPE/Chris%20Brown%202012",
-      "publishedAt": "2019-01-22T18:00:00Z",
-      "content": "R&amp;B star Chris Brown has been detained in Paris after being accused of rape, according to news reports. The American singer was taken into custody on potential charges of aggravated rape and drug infractions, the Associated Press reported, citing a French… [+1607 chars]"
-    },
-    {
-      "source": {
-        "id": null,
-        "name": "Iheart.com"
-      },
-      "author": "Michael Lingard",
-      "title": "Why Is Laser-Gate Getting No Coverage? - Fox Sports Radio",
-      "description": "Colin Cowherd addresses the laser being shined on Tom Brady during the AFC Championship.",
-      "url": "https://foxsportsradio.iheart.com/content/2019-01-22-why-is-laser-gate-getting-no-coverage/",
-      "urlToImage": "https://i.iheart.com/v3/re/new_assets/1e038387-8fae-43b9-b922-337df1501c0d",
-      "publishedAt": "2019-01-22T17:52:00Z",
-      "content": "Colin Cowherd addresses the laser being shined on Tom Brady during the AFC Championship. He believes that if this had happened to Patrick Mahomes in Foxborough, the media would have coined this Laser-Gate and would be destroying the Patriots and calling them … [+91 chars]"
-    },
-    {
-      "source": {
-        "id": "nbc-news",
-        "name": "NBC News"
-      },
-      "author": "Maggie Fox",
-      "title": "Measles outbreaks make 2018 a near-record year for U.S. - NBCNews.com",
-      "description": "Measles outbreaks in Clark, County, Washington and in the New York City area are ongoing and helped make 2018 the second-worst year for the virus since 2000.",
-      "url": "https://www.nbcnews.com/storyline/measles-outbreak/measles-outbreaks-make-2018-near-record-year-u-s-n961276",
-      "urlToImage": "https://media4.s-nbcnews.com/j/newscms/2019_04/2725051/190122-measles-vaccination-al-1204_b1fc6fe602a56df29f25c2eea816747e.nbcnews-fp-1200-630.jpg",
-      "publishedAt": "2019-01-22T17:44:00Z",
-      "content": "Breaking News Emails Get breaking news alerts and special reports. The news and stories that matter, delivered weekday mornings. SUBSCRIBE Jan. 22, 2019, 5:44 PM GMT Health officials in one county in Washington have declared a public health emergency because … [+5924 chars]"
-    },
-    {
-      "source": {
-        "id": null,
-        "name": "Washingtonexaminer.com"
-      },
-      "author": "https://www.washingtonexaminer.com/author/tom-rogan",
-      "title": "Why Trump should recognize Venezuela's opposition leader as president - Washington Examiner",
-      "description": "President Trump should recognize Venezuelan opposition leader Juan Guaido as president of that nation. Doing so would pressure fraudulently elected president Nicolas Maduro's corrupt regime by inspiring new opposition to him, and making clear that those who s…",
-      "url": "https://www.washingtonexaminer.com/opinion/why-trump-should-recognize-venezuelas-opposition-leader-as-president",
-      "urlToImage": "https://mediadc.brightspotcdn.com/dims4/default/a47916e/2147483647/strip/true/crop/2290x1202+0+0/resize/1200x630!/quality/90/?url=https%3A%2F%2Fmediadc.brightspotcdn.com%2F3b%2F35%2Febb08ea6402ca5821ceb48af0b14%2Fjuan-guaido.jpg",
-      "publishedAt": "2019-01-22T17:31:00Z",
-      "content": "P resident Trump should recognize Venezuelan opposition leader Juan Guaido as president of that nation. Doing so would pressure fraudulently elected president Nicolas Maduro's corrupt regime by inspiring new opposition to him, and making clear that those who … [+3089 chars]"
+      "title": "U.S. Will Ask Canada to Extradite Huawei Executive - The New York Times",
+      "description": "The arrest of Meng Wanzhou of Huawei has set off a diplomatic crisis, and China is pressuring Canada to release her, but the U.S. is moving ahead with an extradition request.",
+      "url": "https://www.nytimes.com/2019/01/22/us/politics/meng-wanzhou-extradition.html",
+      "urlToImage": "https://static01.nyt.com/images/2019/01/23/us/politics/23dc-huawei-print/23dc-huawei-facebookJumbo.jpg",
+      "publishedAt": "2019-01-22T23:15:42Z",
+      "content": "The arrest of Ms. Meng followed a yearslong investigation by Justice Department officials in Brooklyn looking at whether a company tied to Huawei did business in Iran in a way that violated sanctions, and whether Ms. Meng lied to American banks about Huaweis … [+1836 chars]"
     }
   ]
 }

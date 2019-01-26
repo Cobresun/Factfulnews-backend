@@ -81,3 +81,4 @@ typings/
 
 #Store
 .store/
+.DS_Store

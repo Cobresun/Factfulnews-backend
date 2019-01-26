@@ -10,7 +10,7 @@ const url = `https://newsapi.org/v2/top-headlines?country=us&apiKey=${newsAPIKey
 
 function fetch(){
     store.remove('all', function(err) {     // empty the file
-        if (err) throw err; // err if the file removal failed
+        // if (err) throw err; // err if the file removal failed <- commented out because it didn't exist
       });
     request(url, function(error, response, body){
         if (error) {

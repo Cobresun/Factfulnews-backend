@@ -31,7 +31,7 @@ function fetch(){
 
 fetch()
 cron.schedule('0 0 0 * * *', () => {    // runs every midnight
-    console.log('running a task every minute');
+    console.log('running a task every midnight');
     fetch()
   });
 

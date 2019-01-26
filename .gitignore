@@ -80,5 +80,5 @@ typings/
 .dynamodb/
 
 #Store
-.store/
+store/
 .DS_Store

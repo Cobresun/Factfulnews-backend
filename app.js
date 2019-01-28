@@ -55,6 +55,16 @@ app.get('/all', function (req, res) {   // When the /all route is accessed
       });
 })
 
+app.get('/all/article', function (req, res) {
+    // GET /all/article?id=<articleID>
+    let articleID = req.query.id
+    store.load('all', function(err, articleObj) {
+        if(err) throw err; // err if JSON parsing failed
+        let articleURL = articleObj.articles[articleID].url
+        res.send(articleURL)
+    })
+})
+
 // All this port stuff is for heroku vs hosting locally
 let port = process.env.PORT;
 if (port == null || port == "") {

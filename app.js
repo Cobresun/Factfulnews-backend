@@ -44,8 +44,10 @@ app.get('/all', function (req, res) {
     store.load('all', function(err, articleObj){
         if(err) throw err; // err if JSON parsing failed
         let articleList = articleObj.articles.slice(0, 10)
+        articleIndex = 0
         articleList.forEach(article => {
-            result.push({title:article.title, urlToImage:article.urlToImage, snippet:article.content})
+            result.push({title:article.title, urlToImage:article.urlToImage, snippet:article.content, index:articleIndex})
+            articleIndex++
         });
         res.contentType('application/json');
         res.send(JSON.stringify(result));

@@ -46,7 +46,8 @@ app.get('/all', function (req, res) {   // When the /all route is accessed
         let articleList = articleObj.articles.slice(0, 10)  // Shorten full list of articles to 10 for now
         articleIndex = 0
         articleList.forEach(article => {
-            if (article.content != null){   // TODO: this changes the number of articles
+            // TODO: this changes the number of articles
+            if (article.content != null && article.description != null){
                 // Only send these elements to frontend, we don't need the rest of the article's details yet
                 result.push({title:article.title, urlToImage:article.urlToImage, snippet:article.content, index:articleIndex})
                 articleIndex++

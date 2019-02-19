@@ -61,8 +61,19 @@ function fetch(){
     })
 }
 
+// Prepares all the annotated articles for viewing
+function refresh(){
+    fetch();
+    // TODO
+    //scrape();
+    //storeArticles();
+    //select();
+    //annotate();
+    //storeAnnotated();
+}
+
 // Creates and sends the response back to the requester
-// Takes the parametres for creating 
+// Takes the parametres for creating a response and the reference to res to send it
 function sendResponse(success, content, message, res){
 	let response = {};
 
@@ -76,24 +87,7 @@ function sendResponse(success, content, message, res){
     res.send(JSON.stringify(response));     // Send the JSON!
 }
 
-// ~~~~~~~~~~~ Startup the backend and repeat every midnight ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-fetch()     // When the app is first run it will do a fetch, after which it runs every midnight
-cron.schedule('0 0 0 * * *', () => {    // runs every midnight
-	console.log('running a task every midnight');
-	fetch() 
-});
-
-
-// All this port stuff is for heroku vs hosting locally
-let port = process.env.PORT;
-if (port == null || port == "") {
-	port = LOCAL_PORT;
-}
-app.listen(port, () => console.log(`Example app listening on port ${port}!`));
-
-
-// ~~~~~~~~~~~ Interface requests ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// ~~~~~~~~~~~ Endpoint requests ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 // When a request is made to root
 app.get('/', function (req, res) {
@@ -129,7 +123,7 @@ app.get('/all', function (req, res) {
 });
 
 // Request to /all/article
-// Returns a string with HTML of the article body or URL to the artciel on error.
+// Returns a string with HTML of the article body or URL to the article on error.
 app.get('/all/article', function (req, res) {
 	// Retrieve the specific article asked for in the link
     // GET /all/article?id=<articleID>
@@ -151,3 +145,20 @@ app.get('/all/article', function (req, res) {
         });
     })
 });
+
+// ~~~~~~~~~~~ Startup the backend and repeat every midnight ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+// Pipeline for getting the annotated articles
+refresh();
+cron.schedule('0 0 0 * * *', () => {    // runs every midnight
+    console.log('running a task every midnight');
+    refresh(); 
+});
+
+
+// All this port stuff is for heroku vs hosting locally
+let port = process.env.PORT;
+if (port == null || port == "") {
+    port = LOCAL_PORT;
+}
+app.listen(port, () => console.log(`Example app listening on port ${port}!`));

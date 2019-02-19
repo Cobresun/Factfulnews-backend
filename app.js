@@ -12,7 +12,7 @@ const rp = require('request-promise');
 const $ = require('cheerio');
 
 // Scrape the article text of the given url and return a string containing the article HTML text
-function scrape(url) {
+function scrape(url, callback) {
 	// Stores result
 	const mainText = [];
 
@@ -23,13 +23,12 @@ function scrape(url) {
 			mainText.push($(this).html());
 		});
 
+		// Return all paragraph html joined by newlines
+		return callback(mainText.join("\n"));
 	})
 	.catch(function(err){
-		mainText.push("Error occured scraping site.");
+		return callback("Error occured scraping site.");
 	});
-
-	// Return all paragraph html joined by newlines
-	return mainText.join("\n");
 }
 
 function fetch(){
@@ -48,7 +47,7 @@ function fetch(){
             articles: articles, 
         };
         store.add(articleList, function(err) {  // Storing all the articles to a JSON file
-        	if (err) throw err
+        	if (err) throw err;
         })
     })
 }
@@ -67,14 +66,14 @@ app.get('/all', function (req, res) {   // When the /all route is accessed
 	let result = [];    
     store.load('all', function(err, articleObj){    // Read from the JSON file
         if(err) throw err; // err if JSON parsing failed
-        let articleList = articleObj.articles.slice(0, 10)  // Shorten full list of articles to 10 for now
-        articleIndex = 0
+        let articleList = articleObj.articles.slice(0, 10);  // Shorten full list of articles to 10 for now
+        articleIndex = 0;
         articleList.forEach(article => {
             // TODO: this changes the number of articles
             if (article.content != null && article.description != null){
                 // Only send these elements to frontend, we don't need the rest of the article's details yet
-                result.push({title:article.title, urlToImage:article.urlToImage, snippet:article.content, index:articleIndex})
-                articleIndex++
+                result.push({title:article.title, urlToImage:article.urlToImage, snippet:article.content, index:articleIndex});
+                articleIndex++;
             }
         });
         res.contentType('application/json');    // Sending JSON to frontend
@@ -84,14 +83,15 @@ app.get('/all', function (req, res) {   // When the /all route is accessed
 
 app.get('/all/article', function (req, res) {
     // GET /all/article?id=<articleID>
-    let articleID = req.query.id
+    let articleID = req.query.id;
     store.load('all', function(err, articleObj) {
         if(err) throw err; // err if JSON parsing failed
-        let articleURL = articleObj.articles[articleID].url
+        let articleURL = articleObj.articles[articleID].url;
 
-        console.log(scrape(articleURL));
-
-        res.send(scrape(articleURL));
+        // Scrape the given article and once done, it sends the text
+        scrape(articleURL, (text) => {
+        	res.send(text);
+        });
     })
 })
 

@@ -20,11 +20,11 @@ function scrape(url, callback) {
 	rp(url).then( function(html){
 		// For every paragraph in the retrieved HTML, push its content onto array
 		$('p', html).each( function(i, elem) {
-			mainText.push($(this).html());
+			mainText.push("<p>" + $(this).html() + "</p>");
 		});
 
 		// Return all paragraph html joined by newlines
-		return callback(mainText.join("\n"));
+		return callback(mainText.join(""));
 	})
 	.catch(function(err){
 		return callback("Error occured scraping site.");

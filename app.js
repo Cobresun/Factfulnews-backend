@@ -99,7 +99,7 @@ app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 app.get('/', function (req, res) {
 	// Return simple message
 	res.send('Welcome to the Factfulnews API!') 
-})
+});
 
 // Request to /all
 // Returns a JSON array of articles on success, otherwise undefined on error
@@ -126,7 +126,7 @@ app.get('/all', function (req, res) {
 
         sendResponse(true, result, "Success", res);
     });
-})
+});
 
 // Request to /all/article
 // Returns a string with HTML of the article body or URL to the artciel on error.
@@ -150,4 +150,4 @@ app.get('/all/article', function (req, res) {
         		sendResponse(false, url, "Unable to scrape text. Sent URL instead.", res);
         });
     })
-})
+});

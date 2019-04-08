@@ -40,7 +40,7 @@ function scrape(url, callback) {
 }
 
 // Calls the NewsAPI and gets the articles
-function fetch(){
+function fetchAll(){
     store.remove('all', function(err) {     // Empty the file
         // If (err) throw err; // err if the file removal failed <- commented out because it didn't exist
     });
@@ -57,17 +57,87 @@ function fetch(){
         };
         store.add(articleList, function(err) {  // Storing all the articles to a JSON file
         	if (err) throw err;
-        })
+        });
+    });
+}
+
+// Determines the top articles to give to the user
+function selectArticles(){
+    let result = [];  
+
+    store.load('all', function(err, articleObj){    // Read from the JSON file
+        if (err) {
+            sendResponse(false, undefined, "Error when reading JSON.", res);
+        }
+
+        // Retrieve only the specified max number of articles
+        let articleList = articleObj.articles.slice(0, MAX_ARTICLES);
+        
+        articleIndex = 0;
+        articleList.forEach(article => {
+            // Discards 'broken' articles
+            // TODO THIS CHANGES THE MAXNUMBER OF ARTICLES, NEED TO FIX THIS
+            if (article.content != null && article.description != null){
+                // Only send these elements to frontend, we don't need the rest of the article's details yet
+                result.push({title:article.title, urlToImage:article.urlToImage, snippet:article.content, index:articleIndex, url:article.url});
+                articleIndex++;
+            }
+        });
+
+        // Placing the articles into the store
+        store.add({id: 'all', articles: result}, function(err) {
+            if (err) throw err;
+        });
+
+    });
+}
+
+function scrapeAll() {
+
+    store.load('all', function(err, articleObj) {
+        if(err) {
+            sendResponse(false, undefined, "Error when reading JSON.", res);
+        }; // err if JSON parsing failed
+
+
+        // articleList.forEach(article => {
+        //     // Discards 'broken' articles
+        //     // TODO THIS CHANGES THE MAXNUMBER OF ARTICLES, NEED TO FIX THIS
+        //     if (article.content != null && article.description != null){
+        //         // Only send these elements to frontend, we don't need the rest of the article's details yet
+        //         result.push({title:article.title, urlToImage:article.urlToImage, snippet:article.content, index:articleIndex, url:article.url});
+        //         articleIndex++;
+        //     }
+        // });
+
+        // Execute the scarping function on each
+        articleList.forEach(scrape(article.url , text => {
+            if (text)
+                sendResponse(true, text, "Success", res);
+            else
+                sendResponse(false, url, "Unable to scrape text. Sent URL instead.", res);
+         
+        } ));
+
+        // let articleURL = articleObj.articles[articleID].url;
+
+        // // Scrape the given article and once done, it sends the text
+        // scrape(articleURL, (text) => {
+        //     if (text)
+        //         sendResponse(true, text, "Success", res);
+        //     else
+        //         sendResponse(false, url, "Unable to scrape text. Sent URL instead.", res);
+        // });
     })
 }
 
+
 // Prepares all the annotated articles for viewing
 function refresh(){
-    fetch();
-    // TODO
-    //scrape();
+    fetchAll();
+    selectArticles();
+    scrapeAll();
     //storeArticles();
-    //select();
     //annotate();
     //storeAnnotated();
 }
@@ -98,27 +168,31 @@ app.get('/', function (req, res) {
 // Request to /all
 // Returns a JSON array of articles on success, otherwise undefined on error
 app.get('/all', function (req, res) {
-	let response = {};
 
-	let result = [];    
-    store.load('all', function(err, articleObj){    // Read from the JSON file
-        if (err) {
-        	sendResponse(false, undefined, "Error when reading JSON.", res);
-        }
+	// let result = [];    
+ //    store.load('all', function(err, articleObj){    // Read from the JSON file
+ //        if (err) {
+ //        	sendResponse(false, undefined, "Error when reading JSON.", res);
+ //        }
 
-        let articleList = articleObj.articles.slice(0, MAX_ARTICLES);  // Shorten full list of articles to 10 for now
+ //        let articleList = articleObj.articles.slice(0, MAX_ARTICLES);  // Shorten full list of articles to 10 for now
         
-        articleIndex = 0;
-        articleList.forEach(article => {
-            // TODO: this changes the number of articles
-            if (article.content != null && article.description != null){
-                // Only send these elements to frontend, we don't need the rest of the article's details yet
-                result.push({title:article.title, urlToImage:article.urlToImage, snippet:article.content, index:articleIndex, url:article.url});
-                articleIndex++;
-            }
-        });
+ //        articleIndex = 0;
+ //        articleList.forEach(article => {
+ //            // TODO: this changes the number of articles
+ //            if (article.content != null && article.description != null){
+ //                // Only send these elements to frontend, we don't need the rest of the article's details yet
+ //                result.push({title:article.title, urlToImage:article.urlToImage, snippet:article.content, index:articleIndex, url:article.url});
+ //                articleIndex++;
+ //            }
+ //        });
 
-        sendResponse(true, result, "Success", res);
+ //        sendResponse(true, result, "Success", res);
+ //    });
+
+    // This should just send the articles
+    store.load('all', function(err, articleObj){ 
+        sendResponse(true, articleObj, "Success", res);
     });
 });
 
@@ -136,13 +210,16 @@ app.get('/all/article', function (req, res) {
 
         let articleURL = articleObj.articles[articleID].url;
 
-        // Scrape the given article and once done, it sends the text
-        scrape(articleURL, (text) => {
-        	if (text)
-        		sendResponse(true, text, "Success", res);
-        	else
-        		sendResponse(false, url, "Unable to scrape text. Sent URL instead.", res);
-        });
+        //TODO send the scraped body
+        sendResponse(true, text, "Success", res);
+
+        // // Scrape the given article and once done, it sends the text
+        // scrape(articleURL, (text) => {
+        // 	if (text)
+        // 		sendResponse(true, text, "Success", res);
+        // 	else
+        // 		sendResponse(false, url, "Unable to scrape text. Sent URL instead.", res);
+        // });
     })
 });
 

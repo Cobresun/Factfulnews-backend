@@ -19,118 +19,6 @@ const url = `https://newsapi.org/v2/top-headlines?country=us&apiKey=${newsAPIKey
 
 // ~~~~~~~~ Helper Functions ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-// Scrape the article text of the given url and return a string containing the article HTML text
-function scrape(url, callback) {
-	// Stores result
-	const mainText = [];
-
-	// Request the HTML at the given url
-	rp(url).then( function(html){
-		// For every paragraph in the retrieved HTML, push its content onto array
-		$('p', html).each( function(i, elem) {
-			mainText.push("<p>" + $(this).html() + "</p>");
-		});
-
-		// Return all paragraph html joined by newlines
-		return callback(mainText.join(""));
-	})
-	.catch(function(err){
-		return callback(undefined);
-	});
-}
-
-// Calls the NewsAPI and gets the articles
-function fetchAll(){
-    store.remove('all', function(err) {     // Empty the file
-        // If (err) throw err; // err if the file removal failed <- commented out because it didn't exist
-    });
-    request(url, function(error, response, body){
-    	if (error) {
-            console.log('error:', error); // Print the error if one occurred
-        }
-        console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
-        const bod = JSON.parse(body);   // Get the JSON sent to us from NEWS API
-        let articles = bod.articles 
-        let articleList = {
-            id: 'all',  // Adding an id to the store for when we eventually add more categories
-            articles: articles, 
-        };
-        store.add(articleList, function(err) {  // Storing all the articles to a JSON file
-        	if (err) throw err;
-        });
-    });
-}
-
-// Determines the top articles to give to the user
-function selectArticles(){
-    let result = [];  
-
-    store.load('all', function(err, articleObj){    // Read from the JSON file
-        if (err) {
-            sendResponse(false, undefined, "Error when reading JSON.", res);
-        }
-
-        // Retrieve only the specified max number of articles
-        let articleList = articleObj.articles.slice(0, MAX_ARTICLES);
-        
-        articleIndex = 0;
-        articleList.forEach(article => {
-            // Discards 'broken' articles
-            // TODO THIS CHANGES THE MAXNUMBER OF ARTICLES, NEED TO FIX THIS
-            if (article.content != null && article.description != null){
-                // Only send these elements to frontend, we don't need the rest of the article's details yet
-                result.push({title:article.title, urlToImage:article.urlToImage, snippet:article.content, index:articleIndex, url:article.url});
-                articleIndex++;
-            }
-        });
-
-        // Placing the articles into the store
-        store.add({id: 'all', articles: result}, function(err) {
-            if (err) throw err;
-        });
-
-    });
-}
-
-function scrapeAll() {
-
-    store.load('all', function(err, articleObj) {
-        if(err) {
-            sendResponse(false, undefined, "Error when reading JSON.", res);
-        }; // err if JSON parsing failed
-
-
-        // articleList.forEach(article => {
-        //     // Discards 'broken' articles
-        //     // TODO THIS CHANGES THE MAXNUMBER OF ARTICLES, NEED TO FIX THIS
-        //     if (article.content != null && article.description != null){
-        //         // Only send these elements to frontend, we don't need the rest of the article's details yet
-        //         result.push({title:article.title, urlToImage:article.urlToImage, snippet:article.content, index:articleIndex, url:article.url});
-        //         articleIndex++;
-        //     }
-        // });
-
-        // Execute the scarping function on each
-        articleList.forEach(scrape(article.url , text => {
-            if (text)
-                sendResponse(true, text, "Success", res);
-            else
-                sendResponse(false, url, "Unable to scrape text. Sent URL instead.", res);
-         
-        } ));
-
-        // let articleURL = articleObj.articles[articleID].url;
-
-        // // Scrape the given article and once done, it sends the text
-        // scrape(articleURL, (text) => {
-        //     if (text)
-        //         sendResponse(true, text, "Success", res);
-        //     else
-        //         sendResponse(false, url, "Unable to scrape text. Sent URL instead.", res);
-        // });
-    })
-}
-
 
 // Prepares all the annotated articles for viewing
 function refresh(){
@@ -213,13 +101,6 @@ app.get('/all/article', function (req, res) {
         //TODO send the scraped body
         sendResponse(true, text, "Success", res);
 
-        // // Scrape the given article and once done, it sends the text
-        // scrape(articleURL, (text) => {
-        // 	if (text)
-        // 		sendResponse(true, text, "Success", res);
-        // 	else
-        // 		sendResponse(false, url, "Unable to scrape text. Sent URL instead.", res);
-        // });
     })
 });
 

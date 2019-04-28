@@ -6,28 +6,21 @@ let store = require('json-fs-store')();
 let cron = require('node-cron');
 const app = express()
 
-// Libraries for scraping
-const rp = require('request-promise');
-const $ = require('cheerio');
+const fetchAll = require("./lib/fetchAll.js")
+const selectArticles = require("./lib/select.js")
+const scrapeAll = require("./lib/scrape.js")
 
 // Constants
 const LOCAL_PORT = 3000; // If this is being run locally then do it on this port
-const newsAPIKey = process.env.NEWS_API;     // A file stored locally (or in Heroku) with the API key
-const MAX_ARTICLES = 10;
-const url = `https://newsapi.org/v2/top-headlines?country=us&apiKey=${newsAPIKey}`;
-
 
 // ~~~~~~~~ Helper Functions ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-
 // Prepares all the annotated articles for viewing
 function refresh(){
-    fetchAll();
-    selectArticles();
-    scrapeAll();
-    //storeArticles();
+    fetchAll(store);
+    selectArticles(store);
+    scrapeAll(store);
     //annotate();
-    //storeAnnotated();
 }
 
 // Creates and sends the response back to the requester

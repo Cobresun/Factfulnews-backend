@@ -17,9 +17,9 @@ const LOCAL_PORT = 3000; // If this is being run locally then do it on this port
 
 // Prepares all the annotated articles for viewing
 function refresh(){
-    fetchAll(store);
-    selectArticles(store);
-    scrapeAll(store);
+    fetchAll(store)
+    selectArticles(store)
+    scrapeAll(store)
     //annotate();
 }
 

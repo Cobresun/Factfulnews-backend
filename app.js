@@ -78,12 +78,14 @@ app.get('/all/article', function (req, res, next) {
 // ~~~~~~~~~~~ Startup the backend and repeat every midnight ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 // Pipeline for getting the annotated articles
-refresh()
-cron.schedule('0 0 0 * * *', () => {    // runs every midnight
-    console.log('running a task every midnight')
+refresh() 
+cron.schedule('0 0 * * *', () => {
+    console.log('Crom job refreshing articles at midnight');
     refresh() 
+}, {
+	scheduled: true,
+	timezone: 'America/Regina'
 })
-
 
 // All this port stuff is for heroku vs hosting locally
 let port = process.env.PORT

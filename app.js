@@ -18,26 +18,14 @@ const LOCAL_PORT = 3000 // If this is being run locally then do it on this port
 // Prepares all the annotated articles for viewing
 function refresh(){
     fetchAllArticles(store, status => {
-
-    	if (!status.success)
-    		sendResponse(status.success, status.content, status.message, status.res)
-    	else
+    	if (status.success)
 		    prepArticles(store, status => {
-
-		    	sendResponse(status.success, status.content, status.message, status.res)
 
 		    	if (status.success)
 				    selectArticles(store, status => {
 
-				    	sendResponse(status.success, status.content, status.message, status.res)
-
 				    	if (status.success)
-						    annotateArticles(store, status => {
-
-						    	sendResponse(status.success, status.content, status.message, status.res)
-
-
-						    })
+						    annotateArticles(store, status => {})
 				    })
 		    })
     })
@@ -52,6 +40,10 @@ function sendResponse(success, content, message, res){
 	response["success"] = success
 	response["content"] = content
 	response["message"] = message
+
+	// Can store log of erros here if needed to catch errors
+	if (!success)
+		console.log("message")
 
 	// Send the response
 	res.contentType('application/json')    // Sending JSON to frontend
@@ -90,9 +82,9 @@ app.get('/all/article', function (req, res) {
         	sendResponse(false, undefined, "Error when reading JSON during endpoint call.", res)
        	}
 
-        let articleURL = articleObj.articles[articleID].url
+        let article = articleObj.articles[articleID]
 
-        sendResponse(true, text, "Success", res)
+        sendResponse(true, article, "Success", res)
 
     })
 })
@@ -101,7 +93,6 @@ app.get('/all/article', function (req, res) {
 
 // Pipeline for getting the annotated articles
 refresh()
-console.log("RUN?")
 cron.schedule('0 0 0 * * *', () => {    // runs every midnight
     console.log('running a task every midnight')
     refresh() 

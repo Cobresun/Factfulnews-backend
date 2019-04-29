@@ -13,8 +13,6 @@ const annotateArticles = require("./lib/annotate.js")
 // Constants
 const LOCAL_PORT = 3000 // If this is being run locally then do it on this port
 
-// ~~~~~~~~ Helper Functions ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 // Prepares all the annotated articles for viewing
 function refresh(){
     fetchAllArticles(store, status => {
@@ -33,25 +31,6 @@ function refresh(){
     })
 }
 
-// Creates and sends the response back to the requester
-// Takes the parametres for creating a response and the reference to res to send it
-function sendResponse(success, content, message, res){
-	let response = {}
-
-	// Prepare the response
-	response["success"] = success
-	response["content"] = content
-	response["message"] = message
-
-	// Can store log of erros here if needed to catch errors
-	if (!success)
-		console.log("message")
-
-	// Send the response
-	res.contentType('application/json')    // Sending JSON to frontend
-    res.send(JSON.stringify(response))     // Send the JSON!
-}
-
 // ~~~~~~~~~~~ Endpoint requests ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 // When a request is made to root
@@ -62,31 +41,31 @@ app.get('/', function (req, res) {
 
 // Request to /all
 // Returns a JSON array of articles on success, otherwise undefined on error
-app.get('/all', function (req, res) {
+app.get('/all', function (req, res, next) {
     // This should just send the articles
     store.load('all', function(err, articleObj){
     	if (err) {
-        	sendResponse(false, undefined, "Error when reading JSON during endpoint call.", res)
+    		next(err)
+        	console.log("Error when reading JSON during endpoint call in /all")
        	}
-        sendResponse(true, articleObj, "Success", res)
+        res.send(JSON.stringify({"articles": articleObj.articles}))
     })
 })
 
 // Request to /all/article
 // Returns a string with HTML of the article body or URL to the article on error.
-app.get('/all/article', function (req, res) {
+app.get('/all/article', function (req, res, next) {
 	// Retrieve the specific article asked for in the link
     // GET /all/article?id=<articleID>
     let articleID = req.query.id
 
     store.load('all', function(err, articleObj) {
         if (err) {
-        	sendResponse(false, undefined, "Error when reading JSON during endpoint call.", res)
+        	next(err)
+        	console.log("Error when reading JSON during endpoint call in /all/article")
        	}
 
-        let article = articleObj.articles[articleID]
-
-        sendResponse(true, article, "Success", res)
+        res.send(JSON.stringify(articleObj.articles[articleID]))
 
     })
 })

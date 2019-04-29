@@ -18,14 +18,16 @@ const LOCAL_PORT = 3000 // If this is being run locally then do it on this port
 // Prepares all the annotated articles for viewing
 function refresh(){
     fetchAllArticles(store, status => {
+        console.log("Fetching complete. " + (status.success ? "Success." : "Failure."))
     	if (status.success)
 		    prepArticles(store, status => {
-
+            console.log("Prepping complete. " + (status.success ? "Success." : "Failure."))
 		    	if (status.success)
 				    selectArticles(store, status => {
+                        console.log("Selecting complete. " + (status.success ? "Success." : "Failure."))
 
 				    	if (status.success)
-						    annotateArticles(store, status => {})
+						    annotateArticles(store, status => {console.log("Annotating complete. " + (status.success ? "Success." : "Failure."))})
 				    })
 		    })
     })

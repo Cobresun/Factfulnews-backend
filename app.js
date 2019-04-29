@@ -48,6 +48,11 @@ app.get('/all', function (req, res, next) {
     		next(err)
         	console.log("Error when reading JSON during endpoint call in /all")
        	}
+
+       	for (let i = 0; i < articleObj.articles.length; i++) {
+       		articleObj.articles[i].text = undefined
+       	}
+
         res.send(JSON.stringify({"articles": articleObj.articles}))
     })
 })

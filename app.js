@@ -1,90 +1,34 @@
 // Imported Libraries
 const express = require('express')
-const request = require('request')
 require('dotenv').config()
-let store = require('json-fs-store')();
-let cron = require('node-cron');
+let store = require('json-fs-store')()
+let cron = require('node-cron')
 const app = express()
 
-// Libraries for scraping
-const rp = require('request-promise');
-const $ = require('cheerio');
+const fetchAllArticles = require("./lib/fetchAll.js")
+const selectArticles = require("./lib/select.js")
+const prepArticles = require("./lib/prep.js")
+const annotateArticles = require("./lib/annotate.js")
 
 // Constants
-const LOCAL_PORT = 3000; // If this is being run locally then do it on this port
-const newsAPIKey = process.env.NEWS_API;     // A file stored locally (or in Heroku) with the API key
-const MAX_ARTICLES = 10;
-const url = `https://newsapi.org/v2/top-headlines?country=us&apiKey=${newsAPIKey}`;
-
-
-// ~~~~~~~~ Helper Functions ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-// Scrape the article text of the given url and return a string containing the article HTML text
-function scrape(url, callback) {
-	// Stores result
-	const mainText = [];
-
-	// Request the HTML at the given url
-	rp(url).then( function(html){
-		// For every paragraph in the retrieved HTML, push its content onto array
-		$('p', html).each( function(i, elem) {
-			mainText.push("<p>" + $(this).html() + "</p>");
-		});
-
-		// Return all paragraph html joined by newlines
-		return callback(mainText.join(""));
-	})
-	.catch(function(err){
-		return callback(undefined);
-	});
-}
-
-// Calls the NewsAPI and gets the articles
-function fetch(){
-    store.remove('all', function(err) {     // Empty the file
-        // If (err) throw err; // err if the file removal failed <- commented out because it didn't exist
-    });
-    request(url, function(error, response, body){
-    	if (error) {
-            console.log('error:', error); // Print the error if one occurred
-        }
-        console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
-        const bod = JSON.parse(body);   // Get the JSON sent to us from NEWS API
-        let articles = bod.articles 
-        let articleList = {
-            id: 'all',  // Adding an id to the store for when we eventually add more categories
-            articles: articles, 
-        };
-        store.add(articleList, function(err) {  // Storing all the articles to a JSON file
-        	if (err) throw err;
-        })
-    })
-}
+const LOCAL_PORT = 3000 // If this is being run locally then do it on this port
 
 // Prepares all the annotated articles for viewing
 function refresh(){
-    fetch();
-    // TODO
-    //scrape();
-    //storeArticles();
-    //select();
-    //annotate();
-    //storeAnnotated();
-}
+    fetchAllArticles(store, status => {
+        console.log("Fetching complete. " + (status.success ? "Success." : "Failure."))
+    	if (status.success)
+		    prepArticles(store, status => {
+            console.log("Prepping complete. " + (status.success ? "Success." : "Failure."))
+		    	if (status.success)
+				    selectArticles(store, status => {
+                        console.log("Selecting complete. " + (status.success ? "Success." : "Failure."))
 
-// Creates and sends the response back to the requester
-// Takes the parametres for creating a response and the reference to res to send it
-function sendResponse(success, content, message, res){
-	let response = {};
-
-	// Prepare the response
-	response["success"] = success;
-	response["content"] = content;
-	response["message"] = message;
-
-	// Send the response
-	res.contentType('application/json');    // Sending JSON to frontend
-    res.send(JSON.stringify(response));     // Send the JSON!
+				    	if (status.success)
+						    annotateArticles(store, status => {console.log("Annotating complete. " + (status.success ? "Success." : "Failure."))})
+				    })
+		    })
+    })
 }
 
 // ~~~~~~~~~~~ Endpoint requests ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -93,72 +37,57 @@ function sendResponse(success, content, message, res){
 app.get('/', function (req, res) {
 	// Return simple message
 	res.send('Welcome to the Factfulnews API!') 
-});
+})
 
 // Request to /all
 // Returns a JSON array of articles on success, otherwise undefined on error
-app.get('/all', function (req, res) {
-	let response = {};
+app.get('/all', function (req, res, next) {
+    // This should just send the articles
+    store.load('all', function(err, articleObj){
+    	if (err) {
+    		next(err)
+        	console.log("Error when reading JSON during endpoint call in /all")
+       	}
 
-	let result = [];    
-    store.load('all', function(err, articleObj){    // Read from the JSON file
-        if (err) {
-        	sendResponse(false, undefined, "Error when reading JSON.", res);
-        }
+       	for (let i = 0; i < articleObj.articles.length; i++) {
+       		articleObj.articles[i].text = undefined
+       	}
 
-        let articleList = articleObj.articles.slice(0, MAX_ARTICLES);  // Shorten full list of articles to 10 for now
-        
-        articleIndex = 0;
-        articleList.forEach(article => {
-            // TODO: this changes the number of articles
-            if (article.content != null && article.description != null){
-                // Only send these elements to frontend, we don't need the rest of the article's details yet
-                result.push({title:article.title, urlToImage:article.urlToImage, snippet:article.content, index:articleIndex, url:article.url});
-                articleIndex++;
-            }
-        });
-
-        sendResponse(true, result, "Success", res);
-    });
-});
+        res.send(JSON.stringify({"articles": articleObj.articles}))
+    })
+})
 
 // Request to /all/article
 // Returns a string with HTML of the article body or URL to the article on error.
-app.get('/all/article', function (req, res) {
+app.get('/all/article', function (req, res, next) {
 	// Retrieve the specific article asked for in the link
     // GET /all/article?id=<articleID>
-    let articleID = req.query.id;
+    let articleID = req.query.id
 
     store.load('all', function(err, articleObj) {
-        if(err) {
-        	sendResponse(false, undefined, "Error when reading JSON.", res);
-       	}; // err if JSON parsing failed
+        if (err) {
+        	next(err)
+        	console.log("Error when reading JSON during endpoint call in /all/article")
+       	}
 
-        let articleURL = articleObj.articles[articleID].url;
+        res.send(JSON.stringify(articleObj.articles[articleID]))
 
-        // Scrape the given article and once done, it sends the text
-        scrape(articleURL, (text) => {
-        	if (text)
-        		sendResponse(true, text, "Success", res);
-        	else
-        		sendResponse(false, url, "Unable to scrape text. Sent URL instead.", res);
-        });
     })
-});
+})
 
 // ~~~~~~~~~~~ Startup the backend and repeat every midnight ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 // Pipeline for getting the annotated articles
-refresh();
+refresh()
 cron.schedule('0 0 0 * * *', () => {    // runs every midnight
-    console.log('running a task every midnight');
-    refresh(); 
-});
+    console.log('running a task every midnight')
+    refresh() 
+})
 
 
 // All this port stuff is for heroku vs hosting locally
-let port = process.env.PORT;
+let port = process.env.PORT
 if (port == null || port == "") {
-    port = LOCAL_PORT;
+    port = LOCAL_PORT
 }
-app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+app.listen(port, () => console.log(`Example app listening on port ${port}!`))

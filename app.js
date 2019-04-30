@@ -12,7 +12,7 @@ const annotateArticles = require("./lib/annotate.js")
 
 // Constants
 const LOCAL_PORT = 3000 // If this is being run locally then do it on this port
-var categoryList = ['all', 'business', 'entertainment', 'general', 'health', 'science', 'sports', 'technology']
+const categoryList = ['all', 'business', 'entertainment', 'general', 'health', 'science', 'sports', 'technology']
 
 function refreshAll() {
 	for (var i = 0; i < categoryList.length; i++){

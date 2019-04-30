@@ -31,6 +31,7 @@ function refresh(){
     })
 }
 
+
 // ~~~~~~~~~~~ Endpoint requests ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 // When a request is made to root
@@ -39,10 +40,12 @@ app.get('/', function (req, res) {
 	res.send('Welcome to the Factfulnews API!') 
 })
 
+
+// ~~~~~~~~~~~ Endpoint requests for each category ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 // Request to /all
 // Returns a JSON array of articles on success, otherwise undefined on error
 app.get('/all', function (req, res, next) {
-    // This should just send the articles
     store.load('all', function(err, articleObj){
     	if (err) {
     		next(err)
@@ -56,6 +59,44 @@ app.get('/all', function (req, res, next) {
         res.send(JSON.stringify({"articles": articleObj.articles}))
     })
 })
+
+// Request to /business
+app.get('/business', function (req, res, next) {
+	res.send('Business articles will come in here!') 
+})
+
+// Request to /entertainment
+app.get('/entertainment', function (req, res, next) {
+	res.send('Entertainment articles will come in here!') 
+})
+
+// Request to /general
+app.get('/general', function (req, res, next) {
+	res.send('General articles will come in here!') 
+})
+
+// Request to /health
+app.get('/health', function (req, res, next) {
+	res.send('Health articles will come in here!') 
+})
+
+// Request to /science
+app.get('/science', function (req, res, next) {
+	res.send('Science articles will come in here!') 
+})
+
+// Request to /sports
+app.get('/sports', function (req, res, next) {
+	res.send('Sports articles will come in here!') 
+})
+
+// Request to /technology
+app.get('/technology', function (req, res, next) {
+	res.send('Technology articles will come in here!') 
+})
+
+
+// ~~~~~~~~~~~ Endpoint requests for each category's articles ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 // Request to /all/article
 // Returns a string with HTML of the article body or URL to the article on error.
@@ -74,6 +115,7 @@ app.get('/all/article', function (req, res, next) {
 
     })
 })
+
 
 // ~~~~~~~~~~~ Startup the backend and repeat every midnight ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

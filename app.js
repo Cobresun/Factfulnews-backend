@@ -1,17 +1,17 @@
 // Imported Libraries
 const express = require('express')
 require('dotenv').config()
-let store = require('json-fs-store')()
-let cron = require('node-cron')
+const store = require('json-fs-store')()
+const cron = require('node-cron')
 const app = express()
 
-const fetchAllArticles = require("./lib/fetchAll.js")
-const selectArticles = require("./lib/select.js")
-const prepArticles = require("./lib/prep.js")
-const annotateArticles = require("./lib/annotate.js")
+const fetchAllArticles = require("./lib/fetchAllArticles.js")
+const selectArticles = require("./lib/selectArticles.js")
+const prepArticles = require("./lib/prepArticles.js")
+const annotateArticles = require("./lib/annotateArticles.js")
 
-// Constants
-const LOCAL_PORT = 3000 // If this is being run locally then do it on this port
+// Execute on this port if local
+const {LOCAL_PORT} = require("./config.json")
 
 // Prepares all the annotated articles for viewing
 function refresh(){

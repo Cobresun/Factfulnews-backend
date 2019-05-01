@@ -23,15 +23,15 @@ function refreshAll() {
 // Prepares all the annotated articles for viewing
 function refresh(category){
     fetchAllArticles(store, category, status => {
-        console.log("Fetching complete. " + (status.success ? "Success." : "Failure."))
+        console.log("Fetching complete. " + (status.success ? "Success." : "Failure.") + "\t(" + category + ")")
     	if (status.success)
 		    prepArticles(store, category, status => {
-            console.log("Prepping complete. " + (status.success ? "Success." : "Failure."))
+            console.log("Prepping complete. " + (status.success ? "Success." : "Failure.") + "\t(" + category + ")")
 		    	if (status.success)
 				    selectArticles(store, category, status => {
-                        console.log("Selecting complete. " + (status.success ? "Success." : "Failure."))
+                        console.log("Selecting complete. " + (status.success ? "Success." : "Failure.") + "\t(" + category + ")")
 				    	if (status.success)
-						    annotateArticles(store, status => {console.log("Annotating complete. " + (status.success ? "Success." : "Failure."))})
+						    annotateArticles(store, status => {console.log("Annotating complete. " + (status.success ? "Success." : "Failure.") + "\t(" + category + ")")})
 				    })
 		    })
     })

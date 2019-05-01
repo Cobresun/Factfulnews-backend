@@ -14,7 +14,7 @@ const annotateArticles = require("./lib/annotateArticles.js")
 const {LOCAL_PORT} = require("./config.json")
 
 // Prepares all the annotated articles for viewing
-function refresh(){
+function refresh() {
     fetchAllArticles(store, status => {
         console.log("Fetching complete. " + (status.success ? "Success." : "Failure."))
     	if (status.success)
@@ -23,7 +23,6 @@ function refresh(){
 		    	if (status.success)
 				    selectArticles(store, status => {
                         console.log("Selecting complete. " + (status.success ? "Success." : "Failure."))
-
 				    	if (status.success)
 						    annotateArticles(store, status => {console.log("Annotating complete. " + (status.success ? "Success." : "Failure."))})
 				    })
@@ -43,7 +42,7 @@ app.get('/', function (req, res) {
 // Returns a JSON array of articles on success, otherwise undefined on error
 app.get('/all', function (req, res, next) {
     // This should just send the articles
-    store.load('all', function(err, articleObj){
+    store.load('all', function(err, articleObj) {
     	if (err) {
     		next(err)
         	console.log("Error when reading JSON during endpoint call in /all")
@@ -70,8 +69,6 @@ app.get('/all/article', function (req, res, next) {
         	console.log("Error when reading JSON during endpoint call in /all/article")
        	}
 
-
-
         res.send(JSON.stringify(articleObj.articles[articleID].text))
 
     })
@@ -84,14 +81,14 @@ refresh()
 cron.schedule('0 0 * * *', () => {
     console.log('Crom job refreshing articles at midnight');
     refresh() 
-}, {
+	}, {
 	scheduled: true,
 	timezone: 'America/Regina'
 })
 
 // All this port stuff is for heroku vs hosting locally
 let port = process.env.PORT
-if (port == null || port == "") {
+if (!port) {
     port = LOCAL_PORT
 }
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))

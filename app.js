@@ -1,21 +1,21 @@
 // Imported Libraries
 const express = require('express')
 require('dotenv').config()
-let store = require('json-fs-store')()
-let cron = require('node-cron')
+const store = require('json-fs-store')()
+const cron = require('node-cron')
 const app = express()
 
-const fetchAllArticles = require("./lib/fetchAll.js")
-const selectArticles = require("./lib/select.js")
-const prepArticles = require("./lib/prep.js")
-const annotateArticles = require("./lib/annotate.js")
+const fetchAllArticles = require("./lib/fetchAllArticles.js")
+const selectArticles = require("./lib/selectArticles.js")
+const prepArticles = require("./lib/prepArticles.js")
+const annotateArticles = require("./lib/annotateArticles.js")
 
 // Constants
-const LOCAL_PORT = 3000 // If this is being run locally then do it on this port
+const {LOCAL_PORT} = require("./config.json")
 const categoryList = ['all', 'business', 'entertainment', 'general', 'health', 'science', 'sports', 'technology']
 
 function refreshAll() {
-	for (var i = 0; i < categoryList.length; i++){
+	for (let i = 0; i < categoryList.length; i++){
 		refresh(categoryList[i])
 	}
 }
@@ -23,16 +23,15 @@ function refreshAll() {
 // Prepares all the annotated articles for viewing
 function refresh(category){
     fetchAllArticles(store, category, status => {
-        console.log("Fetching complete. " + (status.success ? "Success." : "Failure."))
+        console.log("Fetching complete. " + (status.success ? "Success." : "Failure.") + "\t(" + category + ")")
     	if (status.success)
 		    prepArticles(store, category, status => {
-            console.log("Prepping complete. " + (status.success ? "Success." : "Failure."))
+            console.log("Prepping complete. " + (status.success ? "Success." : "Failure.") + "\t(" + category + ")")
 		    	if (status.success)
 				    selectArticles(store, category, status => {
-                        console.log("Selecting complete. " + (status.success ? "Success." : "Failure."))
-
+                        console.log("Selecting complete. " + (status.success ? "Success." : "Failure.") + "\t(" + category + ")")
 				    	if (status.success)
-						    annotateArticles(store, status => {console.log("Annotating complete. " + (status.success ? "Success." : "Failure."))})
+						    annotateArticles(store, status => {console.log("Annotating complete. " + (status.success ? "Success." : "Failure.") + "\t(" + category + ")")})
 				    })
 		    })
     })
@@ -55,7 +54,7 @@ app.get('/:category', function (req, res, next) {
 		store.load(category, function(err, articleObj){
 			if (err) {
 				next(err)
-				console.log("Error when reading JSON")
+				console.log("Error when reading JSON during endpoint call in /category")
 			}
 
 			for (let i = 0; i < articleObj.articles.length; i++) {
@@ -70,20 +69,18 @@ app.get('/:category', function (req, res, next) {
 	}
 })
 
-
 // Returns a string with HTML of the article body or URL to the article on error.
 app.get('/:category/article', function (req, res, next) {
-	
-    let articleID = req.query.id
+    const articleID = req.query.id
 	category = req.params.category
 	if (categoryList.includes(category)){
 		store.load(category, function(err, articleObj) {
 			if (err) {
 				next(err)
-				console.log("Error when reading JSON")
+				console.log("Error when reading JSON during endpoint call in /category/article")
 			}
 
-			res.send(JSON.stringify(articleObj.articles[articleID]))
+			res.send(JSON.stringify(articleObj.articles[articleID].text))
 		})
 	}
 	else {
@@ -106,7 +103,7 @@ cron.schedule('0 0 * * *', () => {
 
 // All this port stuff is for heroku vs hosting locally
 let port = process.env.PORT
-if (port == null || port == "") {
+if (!port) {
     port = LOCAL_PORT
 }
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))

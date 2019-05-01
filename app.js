@@ -62,7 +62,7 @@ app.get('/all', function (req, res, next) {
 app.get('/all/article', function (req, res, next) {
 	// Retrieve the specific article asked for in the link
     // GET /all/article?id=<articleID>
-    let articleID = req.query.id
+    const articleID = req.query.id
 
     store.load('all', function(err, articleObj) {
         if (err) {
@@ -70,7 +70,9 @@ app.get('/all/article', function (req, res, next) {
         	console.log("Error when reading JSON during endpoint call in /all/article")
        	}
 
-        res.send(JSON.stringify(articleObj.articles[articleID]))
+
+
+        res.send(JSON.stringify(articleObj.articles[articleID].text))
 
     })
 })

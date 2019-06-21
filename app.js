@@ -32,7 +32,7 @@ function refresh(category){
 				    selectArticles(store, category, status => {
                         console.log("Selecting complete. " + (status.success ? "Success." : "Failure.") + "\t(" + category + ")")
 				    	if (status.success)
-						    annotateArticles(store, status => {console.log("Annotating complete. " + (status.success ? "Success." : "Failure.") + "\t(" + category + ")")})
+						    annotateArticles(store, category, status => {console.log("Annotating complete. " + (status.success ? "Success." : "Failure.") + "\t(" + category + ")")})
 				    })
 		    })
     })

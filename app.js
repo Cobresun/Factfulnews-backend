@@ -12,7 +12,8 @@ const annotateArticles = require("./lib/annotateArticles.js")
 
 // Constants
 const {LOCAL_PORT} = require("./config.json")
-const categoryList = ['business', 'entertainment', 'general', 'health', 'science', 'sports', 'technology']
+const categoryList = ['business']
+// const categoryList = ['business', 'entertainment', 'general', 'health', 'science', 'sports', 'technology']
 
 function refreshAll() {
 	for (let i = 0; i < categoryList.length; i++){

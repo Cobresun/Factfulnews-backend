@@ -9,19 +9,18 @@ const fetchAllArticles = require("./lib/fetchAllArticles.js")
 const selectArticles = require("./lib/selectArticles.js")
 const prepArticles = require("./lib/prepArticles.js")
 const annotateArticles = require("./lib/annotateArticles.js")
-
-// Constants
 const {LOCAL_PORT} = require("./config.json")
+
 const categoryList = ['business', 'entertainment', 'general', 'health', 'science', 'sports', 'technology']
 
 async function refreshAll() {
 	await Promise.all(
 		categoryList.map(category => 
 			refresh(category).catch(err => {
-				// TODO: handle error
+				console.error(err)
 			})
 		)
-	).catch(e => {})
+	).catch(e => {console.error(e)})
 	console.log('Pipeline complete!')
 }
 
@@ -75,7 +74,6 @@ app.get('/:category/article', function (req, res, next) {
 				next(err)
 				console.log("Error when reading JSON during endpoint call in /category/article")
 			}
-
 			res.send(JSON.stringify(articleObj.articles[articleID].text))
 		})
 	}
@@ -90,7 +88,7 @@ app.get('/:category/article', function (req, res, next) {
 // Pipeline for getting the annotated articles
 refreshAll() 
 cron.schedule('0 0 * * *', () => {
-    console.log('Crom job refreshing articles at midnight');
+    console.log('Cron job refreshing articles at midnight')
     refreshAll()  
 }, {
 	scheduled: true,

@@ -26,28 +26,11 @@ async function refreshAll() {
 }
 
 // Prepares all the annotated articles for viewing
-<<<<<<< HEAD
-function refresh(category){
-    fetchAllArticles(store, category, status => {
-        // console.log("Fetching complete. " + (status.success ? "Success." : "Failure.") + "\t(" + category + ")")
-    	if (status.success)
-		    prepArticles(store, category, status => {
-            // console.log("Prepping complete. " + (status.success ? "Success." : "Failure.") + "\t(" + category + ")")
-		    	if (status.success)
-				    selectArticles(store, category, status => {
-                        // console.log("Selecting complete. " + (status.success ? "Success." : "Failure.") + "\t(" + category + ")")
-				    	if (status.success)
-						    annotateArticles(store, category, status => {console.log("Annotating complete. " + (status.success ? "Success." : "Failure.") + "\t(" + category + ")")})
-				    })
-		    })
-    })
-=======
 async function refresh(category) {
 	await fetchAllArticles(store, category)
 	await prepArticles(store, category)
 	await selectArticles(store, category)
 	await annotateArticles(store, category)
->>>>>>> d7a0427856dcba5c1d5615a230ca945d063455a2
 }
 
 

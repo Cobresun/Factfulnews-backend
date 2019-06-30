@@ -12,8 +12,7 @@ const annotateArticles = require("./lib/annotateArticles.js")
 
 // Constants
 const {LOCAL_PORT} = require("./config.json")
-const categoryList = ['business']
-// const categoryList = ['business', 'entertainment', 'general', 'health', 'science', 'sports', 'technology']
+const categoryList = ['business', 'entertainment', 'general', 'health', 'science', 'sports', 'technology']
 
 function refreshAll() {
 	for (let i = 0; i < categoryList.length; i++){
@@ -24,13 +23,13 @@ function refreshAll() {
 // Prepares all the annotated articles for viewing
 function refresh(category){
     fetchAllArticles(store, category, status => {
-        console.log("Fetching complete. " + (status.success ? "Success." : "Failure.") + "\t(" + category + ")")
+        // console.log("Fetching complete. " + (status.success ? "Success." : "Failure.") + "\t(" + category + ")")
     	if (status.success)
 		    prepArticles(store, category, status => {
-            console.log("Prepping complete. " + (status.success ? "Success." : "Failure.") + "\t(" + category + ")")
+            // console.log("Prepping complete. " + (status.success ? "Success." : "Failure.") + "\t(" + category + ")")
 		    	if (status.success)
 				    selectArticles(store, category, status => {
-                        console.log("Selecting complete. " + (status.success ? "Success." : "Failure.") + "\t(" + category + ")")
+                        // console.log("Selecting complete. " + (status.success ? "Success." : "Failure.") + "\t(" + category + ")")
 				    	if (status.success)
 						    annotateArticles(store, category, status => {console.log("Annotating complete. " + (status.success ? "Success." : "Failure.") + "\t(" + category + ")")})
 				    })

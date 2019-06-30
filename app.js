@@ -14,13 +14,19 @@ const annotateArticles = require("./lib/annotateArticles.js")
 const {LOCAL_PORT} = require("./config.json")
 const categoryList = ['business', 'entertainment', 'general', 'health', 'science', 'sports', 'technology']
 
-function refreshAll() {
-	for (let i = 0; i < categoryList.length; i++){
-		refresh(categoryList[i])
-	}
+async function refreshAll() {
+	await Promise.all(
+		categoryList.map(category => 
+			refresh(category).catch(err => {
+				// TODO: handle error
+			})
+		)
+	).catch(e => {})
+	console.log('Pipeline complete!')
 }
 
 // Prepares all the annotated articles for viewing
+<<<<<<< HEAD
 function refresh(category){
     fetchAllArticles(store, category, status => {
         // console.log("Fetching complete. " + (status.success ? "Success." : "Failure.") + "\t(" + category + ")")
@@ -35,6 +41,13 @@ function refresh(category){
 				    })
 		    })
     })
+=======
+async function refresh(category) {
+	await fetchAllArticles(store, category)
+	await prepArticles(store, category)
+	await selectArticles(store, category)
+	await annotateArticles(store, category)
+>>>>>>> d7a0427856dcba5c1d5615a230ca945d063455a2
 }
 
 

@@ -9,32 +9,27 @@ const fetchAllArticles = require("./lib/fetchAllArticles.js")
 const selectArticles = require("./lib/selectArticles.js")
 const prepArticles = require("./lib/prepArticles.js")
 const annotateArticles = require("./lib/annotateArticles.js")
-
-// Constants
 const {LOCAL_PORT} = require("./config.json")
+
 const categoryList = ['business', 'entertainment', 'general', 'health', 'science', 'sports', 'technology']
 
-function refreshAll() {
-	for (let i = 0; i < categoryList.length; i++){
-		refresh(categoryList[i])
-	}
+async function refreshAll() {
+	await Promise.all(
+		categoryList.map(category => 
+			refresh(category).catch(err => {
+				console.error(err)
+			})
+		)
+	).catch(e => {console.error(e)})
+	console.log('Pipeline complete!')
 }
 
 // Prepares all the annotated articles for viewing
-function refresh(category){
-    fetchAllArticles(store, category, status => {
-        console.log("Fetching complete. " + (status.success ? "Success." : "Failure.") + "\t(" + category + ")")
-    	if (status.success)
-		    prepArticles(store, category, status => {
-            console.log("Prepping complete. " + (status.success ? "Success." : "Failure.") + "\t(" + category + ")")
-		    	if (status.success)
-				    selectArticles(store, category, status => {
-                        console.log("Selecting complete. " + (status.success ? "Success." : "Failure.") + "\t(" + category + ")")
-				    	if (status.success)
-						    annotateArticles(store, status => {console.log("Annotating complete. " + (status.success ? "Success." : "Failure.") + "\t(" + category + ")")})
-				    })
-		    })
-    })
+async function refresh(category) {
+	await fetchAllArticles(store, category)
+	await prepArticles(store, category)
+	await selectArticles(store, category)
+	await annotateArticles(store, category)
 }
 
 
@@ -79,7 +74,6 @@ app.get('/:category/article', function (req, res, next) {
 				next(err)
 				console.log("Error when reading JSON during endpoint call in /category/article")
 			}
-
 			res.send(JSON.stringify(articleObj.articles[articleID].text))
 		})
 	}
@@ -94,7 +88,7 @@ app.get('/:category/article', function (req, res, next) {
 // Pipeline for getting the annotated articles
 refreshAll() 
 cron.schedule('0 0 * * *', () => {
-    console.log('Crom job refreshing articles at midnight');
+    console.log('Cron job refreshing articles at midnight')
     refreshAll()  
 }, {
 	scheduled: true,

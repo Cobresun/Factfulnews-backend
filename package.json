@@ -16,7 +16,7 @@
     "json-fs-store": "^1.0.1",
     "newsapi": "^2.4.0",
     "node-cron": "^2.0.3",
-    "request": "^2.88.0",
+    "request": "^2.88.2",
     "request-promise": "^4.2.5",
     "sentiment": "^5.0.2"
   }
